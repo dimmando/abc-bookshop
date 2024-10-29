@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cloudinary_storage' # Cloudinary storage must be here
+    'cloudinary_storage', # Cloudinary storage must be here
     'django.contrib.sites',
     'allauth',
     'allauth.account',
