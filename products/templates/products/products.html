@@ -149,7 +149,7 @@
                 {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?age=Professionals" aria-label="Filters books for professionals"
+            <a href="{% url 'products' %}?age=professionals" aria-label="Filters books for professionals"
                 {% if request.GET.age == 'professionals' %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>

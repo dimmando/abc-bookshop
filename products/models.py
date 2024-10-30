@@ -1,5 +1,5 @@
 from django.db import models
-# https://github.com/worldofmarcus/project-portfolio-5/blob/main/products/models.py
+from cloudinary.models import CloudinaryField
 from django.core.validators import MinValueValidator
 
 
@@ -8,14 +8,14 @@ class Category(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
-    RELUCTANT = 'reluctant'
-    KEEN = 'keen'
-    AVID = 'avid'
+    Languages = 'Languages'
+    Medicine = 'Medicine'
+    History = 'History'
 
     CATEGORY_CHOICES = [
-        (RELUCTANT, 'reluctant'),
-        (KEEN, 'keen'),
-        (AVID, 'avid'),
+        (Languages, 'Languages'),
+        (Medicine, 'Medicine'),
+        (History, 'History'),
     ]
 
     class Meta:
@@ -25,30 +25,28 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
-        " Method to return category's friendly name "
         return self.friendly_name
 
 
 class Product(models.Model):
     """ Model for children's books """
     category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL
+        'Category', null=False, blank=False, on_delete=models.SET_NULL
         )
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    title = models.CharField(max_length=254)
-    author = models.CharField(max_length=254)
-    size = models.CharField(max_length=254)
-    number_of_pages = models.PositiveIntegerField()
-    description = models.TextField(max_length=1024, default='')
-    price = models.DecimalField(max_digits=6, decimal_places=2, validators=[
+    ean = models.CharField(max_length=13, null=True, blank=True, unique=True)
+    ISBN = models.CharField(max_length=13, null=True, blank=True, unique=True)
+    title = models.CharField(max_length=254, null=False, blank=False)
+    author = models.CharField(max_length=254, null=False, blank=False)
+    size = models.CharField(max_length=254, null=True, blank=True)
+    number_of_pages = models.PositiveIntegerField(null=True, blank=True)
+    description = models.TextField(max_length=1024, default='', null=True, blank=True)
+    price = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False, validators=[
             MinValueValidator(0.0, message=None)])
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True, validators=[
             MinValueValidator(0.0, message=None)])
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
     new_arrival = models.BooleanField(blank=True)
-    feature_product = models.BooleanField(blank=True)
     discount = models.DecimalField(
         max_digits=6, decimal_places=2, blank=True, null=True
         )
@@ -56,12 +54,19 @@ class Product(models.Model):
     sale_price = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True, validators=[
             MinValueValidator(0.0, message=None)])
-    ISBN = models.CharField(max_length=13, unique=True)
-    by_age = models.CharField(max_length=6, choices=[
-        ("6-8", "6-8"), ("9-10", "9-10"), ("11-12", "11-12")])
+    by_age = models.CharField(
+        max_length=40,
+        null=False,
+        blank=False,
+        choices=[
+            ("schoolchildren", "schoolchildren"),
+            ("students", "students"),
+            ("professionals", "professionals"),
+        ],
+    )
+    image = CloudinaryField('image', null=True, blank=True)
 
-    # https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django
-    # To be able to user final_price as model attribute
+    # To be able to user have final_price as model attribute
     # without having to add a new model field
     @property
     def final_price(self):

@@ -32,13 +32,11 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('title'))
             if sortkey == "category":
                 sortkey = 'category__name'
-            # my husband helped me with the sorting price functionality
-            # https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/#conditional-aggregation
             if sortkey == "price":
                 sortkey = 'sort_price'
                 products = products.annotate(sort_price=Case(
                     When(Q(is_sale=True) & Q(sale_price__isnull=False),
-                         then='sale_price'),
+                        then='sale_price'),
                     default='price',
                     output_field=DecimalField()))
             if 'direction' in request.GET:
@@ -70,29 +68,27 @@ def all_products(request):
                 'products_on_sale': products_on_sale
             }
 
-        if 'featured' in request.GET:
-            featured = request.GET['featured']
-            products = products.filter(feature_product=True)
-
         if 'specials' in request.GET:
-            criteria = Q(new_arrival=True) | Q(feature_product=True) | Q(
-                is_sale=True)
+            criteria = Q(new_arrival=True) | Q(is_sale=True)
             specials = request.GET['specials']
             products = products.filter(criteria)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You did not enter any keywords.")
+                messages.error(request, "You did not enter any keywords")
                 return redirect(reverse('products'))
 
             # Checks if the search term is either in the title or the descrip.
-            queries = Q(title__icontains=query) | Q(
-                description__icontains=query
-                ) | Q(
-                by_age__icontains=query
-                ) | Q(
-                    author__icontains=query)
+            queries = (
+                Q(title__icontains=query)
+                | Q(description__icontains=query)
+                | Q(by_age__icontains=query)
+                | Q(author__icontains=query)
+                | Q(category__name__icontains=query)
+                | Q(ean__icontains=query)
+                | Q(isbn__icontains=query)
+            )
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -181,10 +177,10 @@ def add_review(request, product_id):
         #  If the user didn't buy the product in the past,
         #  show an error message
         messages.error(
-                       request,
-                       'You can only leave a review for book '
-                       'you bought previously.'
-                       )
+                    request,
+                    'You can leave a review only for the book '
+                    'you bought previously.'
+                    )
         return redirect(reverse('product_detail', args=[product_id]))
 
     product_bought = product_bought_by_request_user(request, product_id)
@@ -199,12 +195,12 @@ def add_review(request, product_id):
             review.reviewer = request.user
             review.product = product
             review.save()
-            messages.success(request, "Your review is waiting for approval.")
+            messages.success(request, "Your review is waiting for approval")
             return redirect(reverse('product_detail', args=[product_id]))
         else:
             messages.error(request,
-                           'Review was not added. Correct the form inputs.'
-                           )
+                        'Review was not added. Correct the form inputs.'
+                        )
     else:
         review_form = ReviewForm()
 
@@ -236,8 +232,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-                           'Book was not added. Correct the form inputs.'
-                           )
+                        'Book was not added. Correct the form inputs.'
+                        )
     else:
         form = ProductForm()
 
@@ -252,7 +248,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a book in the bookstore offer """
+    """ Edit a book in the bookshop offer"""
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owner can edit books.')
@@ -269,7 +265,7 @@ def edit_product(request, product_id):
             messages.error(
                 request,
                 'Failed to update book. Please check the form inputs.'
-                          )
+                        )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.title}')
