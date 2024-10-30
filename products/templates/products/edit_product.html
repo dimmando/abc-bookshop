@@ -17,8 +17,8 @@
     <div class="row">
         <div class="col-12">
             <hr>
-            <h2 class="logo-font mb-4 text-center">Bookstore Management</h2>
-            <h5 class="text-black text-center">Edit a Product</h5>
+            <h2 class="logo-font mb-4 text-center">ABC Bookshop Management</h2>
+            <h5 class="text-black text-center">Edit product</h5>
             <hr>
         </div>
     </div>
@@ -30,16 +30,16 @@
                 {% csrf_token %}
                 {% for field in form %}
                 {% if field.name != 'image' %}
-                {{ field| as_crispy_field }}
+                {{ field | as_crispy_field }}
                 {% else %}
                 {{ field }}
                 {% endif %}
                 {% endfor %}
                 <div class="text-right">
                     <a class="btn btn-outline-navy rounded-0" href="{% url 'products' %}"
-                        aria-label="Takes the user view all the books.">Cancel</a>
+                        aria-label="Takes the user view all the books">Cancel</a>
                     <button class="btn btn-outline-navy rounded-0" type="submit"
-                        aria-label="Let the admin update a book.">Update Book</button>
+                        aria-label="Let the admin update a book">Update Book</button>
                 </div>
             </form>
         </div>

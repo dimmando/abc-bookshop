@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-12">
             <hr>
-            <h2 class="logo-font mb-4 text-center">Store Management</h2>
+            <h2 class="logo-font mb-4 text-center">ABC Bookshop Management</h2>
             <h5 class="text-black text-center">Add a Book</h5>
             <hr>
         </div>
@@ -29,7 +29,7 @@
                 {% csrf_token %}
                 {% for field in form %}
                 {% if field.name != 'image' %}
-                {{ field| as_crispy_field }}
+                {{ field | as_crispy_field }}
                 {% else %}
                 {{ field }}
                 {% endif %}
@@ -38,7 +38,7 @@
                     <a class="btn btn-outline-navy rounded-0" href="{% url 'products' %}"
                         aria-label="Takes the user to all the books.">Cancel</a>
                     <button class="btn btn-outline-navy rounded-0" type="submit"
-                        aria-label="Let the admin add a book to the store.">Add Book</button>
+                        aria-label="Let the admin add a book to the store">Add Book</button>
                 </div>
             </form>
         </div>

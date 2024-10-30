@@ -3,7 +3,7 @@
 
 {% block extra_title %} | Books {% endblock %}
 
-{% block pknowledge_field_header %}
+{% block page_header %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -18,21 +18,27 @@
         <div class="col text-center mt-3 pt-3">
             {% if request.GET.new %}
             <div class="d-flex justify-content-center">
-                <img src="{% static 'imknowledge_fields/new_arrivals_icon.svg' %}" class="specials-icons"
-                    alt="An imknowledge_field of a ringing bell to notify of new arrivals">
+                <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                    alt="An image of a ringing bell to notify of new arrivals">
                 <h2 class="logo-font">New Arrivals</h2>
+                <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                    alt="An image of a ringing bell to notify of new arrivals">
             </div>
             {% elif request.GET.sale %}
             <div class="d-flex justify-content-center">
-                <img src="{% static 'imknowledge_fields/sale_icon.svg' %}" class="specials-icons-sale"
-                    alt="An imknowledge_field of a start to notify of items on sale">
+                <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                    alt="An image of a start to notify of items on sale">
                 <h2 class="logo-font">On Sale</h2>
+                <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                    alt="An image of a start to notify of items on sale">
             </div>
             {% elif request.GET.specials %}
             <div class="d-flex justify-content-center">
-                <img src="{% static 'imknowledge_fields/all_specials.svg' %}" class="specials-icons"
-                    alt="An imknowledge_field of a star to notify of featured books">
+                <img src="{% static 'images/all_specials.svg' %}" class="specials-icons"
+                    alt="An image of a star to notify of featured books">
                 <h2 class="logo-font">All Specials</h2>
+                <img src="{% static 'images/all_specials.svg' %}" class="specials-icons"
+                    alt="An image of a star to notify of featured books">
             </div>
             {% elif request.resolver_match.url_name and not request.GET.category %}
             <h2 class="logo-font">All Books</h2>
@@ -45,114 +51,111 @@
     {% if request.GET.category %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?category={{ current_category.name }}&knowledge_field=languknowledge_fields"
-                aria-label="Filters books for languknowledge_fields field & {{ current_category.name }} area"
-                {% if request.GET.knowledge_field == 'languknowledge_fields' %} class="btn btn-outline-navy mt-2" {% else %}
-                class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
-                <i class="fa-solid fa-globe"></i> Languknowledge_fields
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=schoolchildren"
+                aria-label="Filters books for schoolchildren & {{ current_category.name }} subject"
+                {% if request.GET.age == 'schoolchildren' %} class="btn btn-outline-navy mt-2" {% else %}
+                class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-child"></i> Schoolchildren
             </a>
-            <a href="{% url 'products' %}?category={{ current_category.name }}&knowledge_field=medicine"
-                aria-label="Filters books for medicine field & {{ current_category.name }} area"
-                {% if request.GET.knowledge_field == 'medicine' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-globe"></i> Medicine
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=students"
+                aria-label="Filters books for students & {{ current_category.name }} subject"
+                {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?category={{ current_category.name }}&knowledge_field=history"
-                aria-label="Filters books for history field & {{ current_category.name }} area"
-                {% if request.GET.knowledge_field == 'history' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-globe"></i>
-                History
+            <a href="{% url 'products' %}?category={{ current_category.name }}&age=professionals"
+                aria-label="Filters books for professionals & {{ current_category.name }} subject"
+                {% if request.GET.age == 'Professionals' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>
             <a href="{% url 'products' %}?category={{ current_category.name }}"
-                aria-label="Show all products from the current category field of knowledges"
-                {% if not 'knowledge_field' in request.GET %}class="btn btn-outline-navy mt-2"
+                aria-label="Show all products from the current category subject"
+                {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2" {% endif %}>
-                <i class="fa-solid fa-globe"></i> All {{ current_category }}
+                All {{ current_category }}
             </a>
         </div>
     </div>
     {% elif request.GET.new %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?new=True&knowledge_field=languknowledge_fields" aria-label="Filters languknowledge_fields books & new arrivals"
-                {% if request.GET.knowledge_field == 'languknowledge_fields' %}class="btn btn-outline-navy mt-2"
+            <a href="{% url 'products' %}?new=True&age=schoolchildren" aria-label="Filters books for schoolchildren & new arrivals"
+                {% if request.GET.age == 'schoolchildren' %}class="btn btn-outline-navy mt-2"
                 {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}>
-                <i class="fa-solid fa-globe"></i> Languknowledge_fields
+                <i class="fa-solid fa-child"></i> Schoolchildren
             </a>
-            <a href="{% url 'products' %}?new=True&knowledge_field=medicine" aria-label="Filters medicine books & new arrivals"
-                {% if request.GET.knowledge_field == 'medicine' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Medicine
+            <a href="{% url 'products' %}?new=True&age=students" aria-label="Filters books for students & new arrivals"
+                {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?new=True&knowledge_field=history" aria-label="Filters history books & new arrivals"
-                {% if request.GET.knowledge_field == 'history' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> History
+            <a href="{% url 'products' %}?new=True&age=professionals" aria-label="Filters books for professionals & new arrivals"
+                {% if request.GET.age == 'professionals' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>
             <a href="{% url 'products' %}?new=True" aria-label="Show all new products"
-                {% if not 'knowledge_field' in request.GET %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> All New
+                {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}> All New
             </a>
         </div>
     </div>
     {% elif request.GET.sale %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?sale=True&knowledge_field=languknowledge_fields" aria-label="Filters languknowledge_fields books & sale"
-                {% if request.GET.knowledge_field == 'languknowledge_fields' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Languknowledge_fields
+            <a href="{% url 'products' %}?sale=True&age=schoolchildren" aria-label="Filters books for schoolchildren & sale"
+                {% if request.GET.age == 'schoolchildren' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"></i> Schoolchildren
             </a>
-            <a href="{% url 'products' %}?sale=True&knowledge_field=medicine" aria-label="Filters medicine books & sale"
-                {% if request.GET.knowledge_field == 'medicine' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Medicine
+            <a href="{% url 'products' %}?sale=True&age=students" aria-label="Filters books for students & sale"
+                {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?sale=True&knowledge_field=history" aria-label="Filters history books & sale"
-                {% if request.GET.knowledge_field == 'history' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> History
+            <a href="{% url 'products' %}?sale=True&age=professionals" aria-label="Filters books for professionals & sale"
+                {% if request.GET.age == 'professionals' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>
             <a href="{% url 'products' %}?sale=True" aria-label="Show all products on sale"
-                {% if not 'knowledge_field' in request.GET %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> All
-                On Sale
+                {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}> All On Sale
             </a>
         </div>
     </div>
     {% elif request.GET.specials %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?specials=True&knowledge_field=languages" aria-label="Filters languages books & some special"
-                {% if request.GET.knowledge_field == 'languages' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Languages
+            <a href="{% url 'products' %}?specials=True&age=schoolchildren" aria-label="Filters books for schoolchildren & some special"
+                {% if request.GET.age == 'schoolchildren' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"></i> Schoolchildren
             </a>
-            <a href="{% url 'products' %}?specials=True&knowledge_field=medicine" aria-label="Filters medicine books & some special"
-                {% if request.GET.knowledge_field == 'medicine' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Medicine
+            <a href="{% url 'products' %}?specials=True&age=students" aria-label="Filters books for students & some special"
+                {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?specials=True&knowledge_field=history" aria-label="Filters history books & some special"
-                {% if request.GET.knowledge_field == 'history' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> History
+            <a href="{% url 'products' %}?specials=True&age=Professionals" aria-label="Filters books for professionals & some special"
+                {% if request.GET.age == 'Professionals' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>
             <a href="{% url 'products' %}?specials=True" aria-label="Show all products in specials"
-                {% if not 'knowledge_field' in request.GET %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> All Specials
+                {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}>All Specials
             </a>
         </div>
     </div>
     {% else %}
     <div class="row text-center mt-2">
         <div class="col-12">
-            <a href="{% url 'products' %}?knowledge_field=6-8" aria-label="Filters languages books"
-                {% if request.GET.knowledge_field == 'languages' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Languages
+            <a href="{% url 'products' %}?age=schoolchildren" aria-label="Filters books for schoolchildren"
+                {% if request.GET.age == 'schoolchildren' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-child"></i> Schoolchildren
             </a>
-            <a href="{% url 'products' %}?knowledge_field=medicine" aria-label="Filters medicine books"
-                {% if request.GET.knowledge_field == 'medicine' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> Medicine
+            <a href="{% url 'products' %}?age=students" aria-label="Filters books for kids students"
+                {% if request.GET.age == 'students' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-graduation-cap"></i> Students
             </a>
-            <a href="{% url 'products' %}?knowledge_field=history" aria-label="Filters history books"
-                {% if request.GET.knowledge_field == 'history' %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> History
+            <a href="{% url 'products' %}?age=Professionals" aria-label="Filters books for professionals"
+                {% if request.GET.age == 'professionals' %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-flask"></i> Professionals
             </a>
             <a href="{% url 'products' %}" aria-label="Show all products"
-                {% if not 'knowledge_field' in request.GET %}class="btn btn-outline-navy mt-2"
-                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}><i class="fa-solid fa-globe"></i> All
+                {% if not 'age' in request.GET %}class="btn btn-outline-navy mt-2"
+                {% else %}class=" btn btn-outline-navy-reverse mt-2 " {% endif %}> All
             </a>
         </div>
     </div>
@@ -191,7 +194,7 @@
                     <p class="mt-3 text-center text-md-left">
                         {% if search_term or current_category or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'products' %}"
-                                aria-label="Shows the number of books currently filtered.">Home</a> | </span>
+                                aria-label="Shows the number of books currently filtered">Home</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
@@ -202,24 +205,20 @@
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0 shadow">
-                        {% if product.imknowledge_field %}
-                        <a href="{% url 'product_detail' product.id %}" class="a-product-imknowledge_field"
-                            aria-label="Takes the user to the detail pknowledge_field of the chosen book. A picture of the book is displayed.">
-                            <img class="card-img-top img-fluid card-imknowledge_field" src="{{ product.imknowledge_field.url }}"
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}" class="a-product-image"
+                            aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed.">
+                            <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
                                 alt="{{ product.title }}">
                             {% if product.new_arrival or product.feature_product or product.is_sale %}
                             <div class="specials-icons-card">
                                 {% if product.new_arrival %}
-                                <img src="{% static 'imknowledge_fields/new_arrivals_icon.svg' %}" class="specials-icons"
-                                    alt="An imknowledge_field of a ringing bell to notify of new arrivals">
-                                {% endif %}
-                                {% if product.feature_product %}
-                                <img src="{% static 'imknowledge_fields/featured_icon.svg' %}" class="specials-icons"
-                                    alt="An imknowledge_field of a star to notify of featured books">
+                                <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                                    alt="An image of a ringing bell to notify of new arrivals">
                                 {% endif %}
                                 {% if product.is_sale %}
-                                <img src="{% static 'imknowledge_fields/sale_icon.svg' %}" class="specials-icons-sale"
-                                    alt="An imknowledge_field of a start to notify of items on sale">
+                                <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                                    alt="An image of a start to notify of items on sale">
                                 {% endif %}
                             </div>
                             {% else %}
@@ -228,8 +227,8 @@
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}"
-                            aria-label="Takes the user to the detail pknowledge_field of the chosen book. Noimknowledge_field substitute picture is displayed.">
-                            <img class="card-img-top img-fluid card-imknowledge_field" src="{{ MEDIA_URL }}noimknowledge_field.png"
+                            aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed.">
+                            <img class="card-img-top img-fluid card-image" src="{% static 'images/default.jpg' %}"
                                 alt="{{ product.title }}">
                         </a>
                         {% endif %}
@@ -257,16 +256,16 @@
                                     {% endif %}
                                     {% if product.category %}
                                     <div class="category-icon d-flex align-items-end text-black">
-                                        {% if product.category.name == "Reluctant" %}
-                                        <img class="mt-1 mb-1 category-icon-imknowledge_field"
-                                            src="{% static 'imknowledge_fields/reluctant.svg' %}"
-                                            alt="An icon of basic skill level - Reluctant reader">
-                                        {% elif product.category.name == "Keen" %}
-                                        <img class="mt-1 mb-1 category-icon-imknowledge_field" src="{% static 'imknowledge_fields/keen.svg' %}"
-                                            alt="An icon of an intermediate skill level - Keen reader">
-                                        {% elif product.category.name == "Avid" %}
-                                        <img class="mt-1 mb-1 category-icon-imknowledge_field" src="{% static 'imknowledge_fields/avid.svg' %}"
-                                            alt="An icon of an advanced skill level - Avid reader">
+                                        {% if product.category.name == "Languages" %}
+                                        <img class="mt-1 mb-1 category-icon-image"
+                                            src="{% static 'images/languages.svg' %}"
+                                            alt="An icon of languages subject">
+                                        {% elif product.category.name == "Medicine" %}
+                                        <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/medicine.svg' %}"
+                                            alt="An icon of medicine subject">
+                                        {% elif product.category.name == "History" %}
+                                        <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/history.svg' %}"
+                                            alt="An icon of history subject">
                                         {% endif %}
                                         <span class="text-black mt-1 pl-1">
                                             <a class="text-black text-decoration-none"
@@ -275,7 +274,7 @@
                                                 {{ product.category.friendly_name }}</a></span>
                                     </div>
                                     {% endif %}
-                                    <p class="mb-0 text-black"><i class="fa-solid fa-child"></i> {{ product.by_knowledge_field }}
+                                    <p class="mb-0 text-black"><i class="fa-solid fa-child"></i> {{ product.by_age }}
                                     </p>
                                     <div class="d-flex align-items-center">
                                         {% if product.rating %}
@@ -287,12 +286,12 @@
                                         {% if request.user.is_superuser %}
                                         <div class="ml-3">
                                             <a href="{% url 'edit_product' product.id %}"
-                                                aria-label="Takes the user to edit_product pknowledge_field. Edit."
+                                                aria-label="Takes the user to edit product page"
                                                 class="edit-button small-buttons">Edit</a> |
                                             <!-- Button trigger modal -->
                                             <button type="button" class="text-danger border-0 bg-white small-buttons"
                                                 data-toggle="modal" data-target="#bookModal_{{ product.id }}"
-                                                aria-label="Triggers the confirm deletion modal. Delete.">
+                                                aria-label="Triggers the confirm deletion modal">
                                                 Delete
                                             </button>
                                             {% include 'products/includes/product_deletion.html' %}
@@ -317,13 +316,13 @@
                             {% if product in customer_wishlist %}
                             <a href="{% url 'remove_from_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Remove From Wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"></i> Remove From
+                                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-heart" style="color: #ff0000;"></i> Remove From
                                 Wishlist
                             </a>
                             {% else %}
                             <a href="{% url 'add_to_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Add to wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="far fa-heart"></i> Add To
+                                class="btn btn-outline-navy-reverse"><i class="fa-regular fa-heart" style="color: #ff0000;"></i> Add To
                                 Wishlist
                             </a>
                             {% endif %}
@@ -360,7 +359,7 @@
     </div>
 </div>
 <div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
-    <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the very top of the pknowledge_field.">
+    <a href="" class="btt-link d-flex h-100" aria-label="The arrow takes the user to the top of the page">
         <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
     </a>
 </div>
