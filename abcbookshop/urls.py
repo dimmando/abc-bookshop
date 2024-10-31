@@ -21,4 +21,18 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path("", include("products.urls"), name="products-urls"),
+
+    path('products/', include('products.urls')),
+    
+    path('bag/', include('bag.urls')),
+    path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
+    path('newsletter/', include('newsletter.urls')),
+    # path('djrichtextfield/', include('djrichtextfield.urls')),
+    path('summernote/', include('django_summernote.urls')),
+    path('contact/', include('contact.urls')),
+    path('wishlist/', include('wishlist.urls')),
+    path('bookstoremanagement/', include('bookstoremanagement.urls')),
+    path('enquiry/', include('enquiry.urls')),
+    path('reviews/', include('reviews.urls')),
 ]

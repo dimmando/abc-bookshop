@@ -1,4 +1,4 @@
-<!-- Main navigation - product filtering, products by category, articles, ... -->
+<!-- Main navigation - product filtering, products by category, etc. -->
 <div class="collapse navbar-collapse bg-navy" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto p-2">
         <li class="nav-item dropdown">
@@ -29,21 +29,20 @@
                     class="dropdown-item">All Books</a>
             </div>
         </li>
-        <!-- Sorting by Skill level -->
+        <!-- Sorting by subject -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5"
-                aria-label="Takes the user to the dropdown for the reading skill levels" href="#"
+                aria-label="Takes the user to the dropdown for the subject" href="#"
                 id="all-skill-level-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Skill Level
+                Subject
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=Reluctant"
-                    aria-label="Takes the user to books for reluctant readers." class="dropdown-item ">Reluctant
-                    Reader</a>
-                <a href="{% url 'products' %}?category=Keen" aria-label="Takes the user to books for keen readers."
-                    class="dropdown-item">Keen Reader</a>
-                <a href="{% url 'products' %}?category=Avid" aria-label="Takes the user to books for avid readers."
-                    class="dropdown-item">Avid Reader</a>
+                <a href="{% url 'products' %}?category=Languages"
+                    aria-label="Takes the user to languages books" class="dropdown-item ">Languages</a>
+                <a href="{% url 'products' %}?category=Medicine" aria-label="Takes the user to medicine books"
+                    class="dropdown-item">Medicine</a>
+                <a href="{% url 'products' %}?category=History" aria-label="Takes the user to history books"
+                    class="dropdown-item">History</a>
                 <a href="{% url 'products' %}" aria-label="Takes the user to view all books." class="dropdown-item">All
                     Books</a>
             </div>
@@ -57,24 +56,17 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="special-offers-link">
                 <a href="{% url 'products' %}?new=True" aria-label="Takes the user new arrivals."
-                    class="dropdown-item">New
-                    Arrivals</a>
-                <a href="{% url 'products' %}?featured=True" aria-label="Takes the user to featured books."
-                    class="dropdown-item">Featured Books</a>
+                    class="dropdown-item">New arrivals</a>
                 <a href="{% url 'products' %}?sale=True" aria-label="Takes the user to books on sale."
-                    class="dropdown-item">On
-                    Sale</a>
+                    class="dropdown-item">Sale</a>
                 <a href="{% url 'products' %}?specials=True" aria-label="Takes the user all special offers."
-                    class="dropdown-item">All
-                    Specials</a>
+                    class="dropdown-item">All specials</a>
             </div>
         </li>
-        <!-- Articles -->
+        <!-- FAQ -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'articles' %}"
-                id="article-link">
-                ARTICLES
-            </a>
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'enquiries' %}"
+                id="article-link">FAQ</a>
         </li>
         <!-- Contact Us -->
         <li class="nav-item dropdown">

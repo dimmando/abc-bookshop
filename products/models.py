@@ -31,7 +31,7 @@ class Category(models.Model):
 class Product(models.Model):
     """ Model for children's books """
     category = models.ForeignKey(
-        'Category', null=False, blank=False, on_delete=models.SET_NULL
+        'Category', null=True, blank=True, on_delete=models.SET_NULL
         )
     ean = models.CharField(max_length=13, null=True, blank=True, unique=True)
     ISBN = models.CharField(max_length=13, null=True, blank=True, unique=True)

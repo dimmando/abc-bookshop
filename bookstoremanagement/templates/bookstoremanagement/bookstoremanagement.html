@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} | Bookshop Management {% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 pt-3">
+            <h2 class="logo-font">ABC Bookshop Management</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Book management section -->
+    <div class="col text-center mt-3 pt-3">
+        <h4 class="logo-font">Book Management</h4>
+        <hr class="w-50 mb-1">
+        <div class="row text-center mt-2">
+            <div class="col-12 d-flex flex-column align-items-center bookstore-management">
+                <a href="{% url 'add_product' %}"
+                    aria-label="Takes the admin to a page where they can add a new book to the store. Add Book."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-plus"> </i> Add Book
+                </a>
+                <a href="{% url 'products' %}"
+                    aria-label="Takes the admin to all books where they can choose which book to edit. Edit Book."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-pen-to-square"> </i> Edit Book
+                </a>
+                <a href="{% url 'products' %}"
+                    aria-label="Takes the admin to all books where they can choose which book to delete. Delete Book."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-trash"> </i> Delete Book
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of Book section -->
+    <!-- FAQ section -->
+    <div class="col text-center mt-3 pt-3">
+        <h4 class="logo-font">FAQ Management</h4>
+        <hr class="w-50 mb-1">
+        <div class="row text-center mt-2">
+            <div class="col-12 d-flex flex-column align-items-center bookstore-management">
+                <a href="{% url 'add_enquiry' %}" aria-label="Lets the admin add a new enquiry. Add Enquiry."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-plus"> </i> Add Enquiry
+                </a>
+                <a href="{% url 'enquiries' %}"
+                    aria-label="Takes the admin to all enquiries where they can choose which enquiry to edit. Edit Enquiry."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-pen-to-square"> </i> Edit
+                    Enquiry
+                </a>
+                <a href="{% url 'enquiries' %}"
+                    aria-label="Takes the admin to all enquirues where they can choose which enquiry to delete. Delete Enquiry."
+                    class="btn btn-outline-navy-reverse mt-2 w-50"><i class="fa-solid fa-trash"> </i> Delete Enquiry
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of FAQ section -->
+</div>
+{% endblock %}
