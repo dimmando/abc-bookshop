@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %} | Frequently Asked Questions {% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="overlay"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font mt-5">FAQ's</h2>
+            <hr class="w-50 mb-2">
+
+        </div>
+    </div>
+
+</div>
+<div class="container text-center" id="faq">
+    <div class="row">
+        <div class="col my-4">
+            <!-- Display all enquries collapsible buttons -->
+            {% for enquiry in enquiries %}
+            <div class="accordion" id="enquiry-{{enquiry.id}}">
+                <div class="card">
+                    <div class="card-header p-0" id="headingOne-{{enquiry.id}}">
+                        <h2 class="mb-0">
+                            <button class="btn btn-block text-left p-3" type="button" data-toggle="collapse"
+                                data-target="#collapseOne-{{enquiry.id}}" aria-expanded="false"
+                                aria-controls="collapseOne-{{enquiry.id}}" aria-label="Displays the enquiry text.">
+                                {{enquiry.enquiry}}
+
+                            </button>
+                        </h2>
+                        {% if request.user.is_superuser %}
+                        <div class="text-uppercase ml-3">
+                            <a href="{% url 'edit_enquiry' enquiry.id%}"
+                                class="text-success text-decoration-none p-1 border-0 small-buttons"
+                                aria-label="Lets the user edit the chosen enquiry.">Edit</a>
+                            <button type="button" class="text-danger text-uppercase p-1 border-0 small-buttons"
+                                data-toggle="modal" data-target="#enquiryModal_{{ enquiry.id }}"
+                                aria-label="Show a confirm deletion modal.">
+                                Delete
+                            </button>
+                            {% include 'enquiry/includes/enquiry_deletion.html' %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div id="collapseOne-{{enquiry.id}}" class="collapse" aria-labelledby="headingOne-{{enquiry.id}}"
+                        data-parent="#enquiry-{{enquiry.id}}">
+                        <div class="card-body">
+                            {{enquiry.answer}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mb-5"></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
