@@ -26,9 +26,9 @@ def add_enquiry(request):
     """ Add a new enquiry """
     if not request.user.is_superuser:
         messages.error(
-                        request,
-                        'Sorry, only store owner can add new enquiries.'
-                        )
+                    request,
+                    'Sorry, only store owner can add new enquiries.'
+                    )
         return redirect(reverse('home'))
 
     enquiries = Enquiry.objects.all()
@@ -42,8 +42,8 @@ def add_enquiry(request):
             return redirect(reverse('enquiries'))
         else:
             messages.error(request,
-                            'Enquiry was not added. Correct the form inputs.'
-                            )
+                        'Enquiry was not added. Correct the form inputs.'
+                        )
     else:
         form = EnquiryForm()
 
@@ -75,8 +75,8 @@ def edit_enquiry(request, enquiry_id):
             return redirect(reverse('enquiries'))
         else:
             messages.error(request,
-                            'Enquiry was not edited. Correct the form inputs.'
-                            )
+                        'Enquiry was not edited. Correct the form inputs.'
+                        )
     else:
         form = EnquiryForm(instance=enquiry)
 
