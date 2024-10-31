@@ -1,0 +1,74 @@
+<!-- Mobile collapsible header -->
+<ul class="my-auto mr-2 pt-1 d-block d-lg-none">
+    <li class="list-inline-item">
+        <a class="text-black nav-link d-block d-lg-none" aria-label="Takes the user to the search bar." href="#"
+            id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-search fa-lg"></i></div>
+            </div>
+        </a>
+        <div class="dropdown-menu-search dropdown-menu border-0 w-100 p-3 rounded-0 my-0"
+            aria-labelledby="mobile-search">
+            <form class="form" method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q"
+                        placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit"
+                            aria-label="A search icon to intiate search for the chosen keyword.">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </li>
+    <li class="list-inline-item dropdown">
+        <a class="text-black nav-link d-block d-lg-none"
+            aria-label="Takes the user to the dropdown under user profile icon." href="#" id="user-options-mobile"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+            </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options-mobile">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="{% url 'bookstoremanagement' %}" aria-label="Takes the admin to bookstore management page."
+                class="dropdown-item">Bookstore Management</a>
+            {% endif %}
+            <a href="{% url 'profile' %}" aria-label="Takes the user to their profile." class="dropdown-item">My
+                Profile</a>
+            <a href="{% url 'account_logout' %}" aria-label="Takes the user to the logout page."
+                class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" aria-label="Takes the user to registration page."
+                class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" aria-label="Takes the user to the login page."
+                class="dropdown-item">Login</a>
+            {% endif %}
+        </div>
+    </li>
+    <li class="list-inline-item dropdown">
+        {% if request.user.is_authenticated %}
+        <a class="{% if customer_wishlist %}text-warning{% else %}text-black{% endif %} nav-link"
+            href="{% url 'wishlist' %}" id="wishlist-link-mobile"
+            aria-label="Takes the user to their wishlist if signed in.">
+            <div class="text-center">
+                <div><i class="fa-solid fa-heart fa-lg"></i></div>
+            </div>
+        </a>
+        {% endif %}
+    </li>
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+            href="{% url 'view_bag' %}" aria-label="Takes the user to view the shopping bag.">
+            <div class=" text-center">
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+            </div>
+        </a>
+    </li>
+</ul>
+<!-- End of Mobile Navigation -->

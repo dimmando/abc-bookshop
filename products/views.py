@@ -13,7 +13,7 @@ from profiles.models import UserProfile
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all products, sorting, filtering and search queries """
 
     products = Product.objects.all()
     query = None
