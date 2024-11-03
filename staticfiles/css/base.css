@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     color: #891c1c;
-    font-family: 'barlow', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 /* Main */
@@ -64,7 +64,7 @@ main {
     top: 0;
     left: 0;
     position: fixed;
-    background: #EDFFD9;
+    background: #f0ffe0;
     z-index: -1;
 }
 
@@ -83,7 +83,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    background: yellow;
+    background: transparent;
     padding: 10px;
     border-radius: 5px;
 }
@@ -114,34 +114,39 @@ main {
     text-transform: uppercase;
 }
 
+.logo-name {
+    font-family: 'Abril';
+    color: #006666;
+}
+
 .main-logo-link {
     width: fit-content;
 }
 
 /* Buttons */
 .shop-now-button {
-    background: #3A3042;
+    background: #4c244f;
     color: white;
     min-width: 100px;
     max-width: 150px;
 }
 
 .btn-navy {
-    background: #3A3042;
+    background: #4c244f;
     color: white;
     padding: 0;
 }
 
 .btn-outline-navy {
-    background: #3A3042;
+    background: #4c244f;
     color: white !important;
-    border: 1px solid #3A3042;
+    border: 1px solid #4c244f;
 }
 
 .btn-outline-navy-reverse {
     background: white !important;
-    color: #3A3042;
-    border: 1px solid #3A3042;
+    color: #4c244f;
+    border: 1px solid #4c244f;
     font-size: 0.8rem;
 }
 
@@ -149,18 +154,18 @@ main {
 .btn-outline-navy:active,
 .btn-outline-navy:focus {
     background: #EDFFD9;
-    color: #3A3042 !important;
+    color: #4c244f !important;
 }
 
 .btn-outline-navy-reverse:hover,
 .btn-outline-navy-reverse:active,
 .btn-outline-navy-reverse:focus {
-    background: #3A3042 !important;
+    background: #4c244f !important;
     color: #fff;
 }
 
 a.category-badge>span.badge:hover {
-    background-color: #3A3042 !important;
+    background-color: #4c244f !important;
     color: #fff !important;
 }
 
@@ -184,7 +189,7 @@ a.category-badge>span.badge:hover {
 .btn-navy:hover,
 .btn-navy:active,
 .btn-navy:focus {
-    background: #3A3042;
+    background: #4c244f;
     color: white;
 }
 
@@ -195,8 +200,8 @@ a.category-badge>span.badge:hover {
 /* Toasts  */
 .message-container {
     position: fixed;
-    top: 72px;
-    right: 15px;
+    top: 103px;
+    right: 10px;
     z-index: 99999999999;
 }
 
@@ -272,7 +277,7 @@ input[name='q']::placeholder {
 }
 
 .bg-navy {
-    background: #3A3042 !important;
+    background: #4c244f !important;
 }
 
 /* Product Card */
@@ -424,7 +429,7 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #3A3042;
+    background-color: #4c244f;
     border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -454,7 +459,7 @@ input[name='q']::placeholder {
 /* Newsletter container */
 
 .newsletter-container {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #mc_embed_signup {
@@ -484,7 +489,7 @@ input[name='q']::placeholder {
 
 footer {
     flex-shrink: 0;
-    background-color: #3A3042;
+    background-color: #4c244f;
     font-size: 0.8em;
     width: 100vw;
 }
@@ -504,7 +509,7 @@ a.text-reset {
 }
 
 .copyright {
-    background-color: #3A3042;
+    background-color: #4c244f;
 }
 
 /* Media Queries */

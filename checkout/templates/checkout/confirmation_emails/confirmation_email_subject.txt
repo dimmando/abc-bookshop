@@ -1,1 +1,1 @@
-Bookworm Kid Confirmation for Order Number {{ order.order_number }}
+ABC Bookshop confirmation for Order Number {{ order.order_number }}
