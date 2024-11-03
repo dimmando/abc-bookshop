@@ -8,7 +8,7 @@ from django.http import HttpResponse
 
 def contact(request):
     """
-    Send an inquiry to ABC Bookshop owners
+    Sending request to ABC Bookshop owners
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)

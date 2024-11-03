@@ -6,10 +6,10 @@ from django.db.models import Case, DecimalField, F, Q, Value, When
 from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
-# from reviews.models import Review
-# from reviews.forms import ReviewForm
-# from checkout.models import Order, OrderLineItem
-# from profiles.models import UserProfile
+from reviews.models import Review
+from reviews.forms import ReviewForm
+from checkout.models import Order, OrderLineItem
+from profiles.models import UserProfile
 
 
 def all_products(request):
@@ -79,7 +79,6 @@ def all_products(request):
                 messages.error(request, "You did not enter any keywords")
                 return redirect(reverse('products'))
 
-            # Checks if the search term is either in the title or the descrip.
             queries = (
                 Q(title__icontains=query)
                 | Q(description__icontains=query)
@@ -222,7 +221,7 @@ def add_product(request):
     """ Add a book to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owner can add book.')
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -252,7 +251,7 @@ def edit_product(request, product_id):
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owner can edit books.')
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -286,7 +285,7 @@ def delete_product(request, product_id):
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owner can delete books.')
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()

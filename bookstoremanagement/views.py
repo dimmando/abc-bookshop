@@ -12,7 +12,7 @@ def bookstoremanagement(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only a shop admin can access this link.')
         # raise PermissionDenied
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
     else:
         return render(
                     request,

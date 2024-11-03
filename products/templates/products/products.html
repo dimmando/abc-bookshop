@@ -41,7 +41,7 @@
                     alt="An image of a star to notify of featured books">
             </div>
             {% elif request.resolver_match.url_name and not request.GET.category %}
-            <h2 class="logo-font">All Books</h2>
+            <h2 class="logo-font">All our books</h2>
             {% else %}
             <h2 class="logo-font">{{ current_category.friendly_name }}</h2>
             {% endif %}
@@ -256,14 +256,14 @@
                                     {% endif %}
                                     {% if product.category %}
                                     <div class="category-icon d-flex align-items-end text-black">
-                                        {% if product.category.name == "Languages" %}
+                                        {% if product.category.name == "languages" %}
                                         <img class="mt-1 mb-1 category-icon-image"
                                             src="{% static 'images/languages.svg' %}"
                                             alt="An icon of languages subject">
-                                        {% elif product.category.name == "Medicine" %}
+                                        {% elif product.category.name == "medicine" %}
                                         <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/medicine.svg' %}"
                                             alt="An icon of medicine subject">
-                                        {% elif product.category.name == "History" %}
+                                        {% elif product.category.name == "history" %}
                                         <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/history.svg' %}"
                                             alt="An icon of history subject">
                                         {% endif %}

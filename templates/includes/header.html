@@ -7,10 +7,10 @@
         </div>
     </div>
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-        <div class="col-12 col-lg-4 my-auto d-flex py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'products' %}" class="nav-link main-logo-link"
+        <div class="col-12 col-lg my-auto d-flex py-1 py-lg-0 text-center text-lg-left">
+            <a href="{% url 'products' %}" class="nav-link main-logo-link d-flex align-items-center"
                 aria-label="Takes the user to the ABC Bookshop home page">
-                <h2 class="logo-font logo-name text-black my-0"><strong>ABC</strong> Bookshop</h2>
+                <img src="{% static 'images/logo.png' %}" alt="Logo" class="me-2"><h2 class="logo-name my-0"><strong>&nbsp;ABC Bookshop</strong></h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

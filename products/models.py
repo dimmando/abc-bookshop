@@ -8,14 +8,14 @@ class Category(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
-    Languages = 'Languages'
-    Medicine = 'Medicine'
-    History = 'History'
+    LANGUAGES = 'languages'
+    MEDICINE = 'medicine'
+    HISTORY = 'history'
 
     CATEGORY_CHOICES = [
-        (Languages, 'Languages'),
-        (Medicine, 'Medicine'),
-        (History, 'History'),
+        (LANGUAGES, 'languages'),
+        (MEDICINE, 'medicine'),
+        (HISTORY, 'history'),
     ]
 
     class Meta:

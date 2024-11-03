@@ -5,7 +5,7 @@ html {
 /* Body */
 body {
     height: 100%;
-    color: #ffffff;
+    color: #891c1c;
     font-family: 'barlow', sans-serif;
 }
 
@@ -33,7 +33,7 @@ main {
 }
 
 .main-navbar {
-    padding: 8px 0 0 0;
+    padding: 4px 0 4px 0;
 }
 
 /* Home Page */

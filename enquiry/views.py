@@ -29,7 +29,7 @@ def add_enquiry(request):
                     request,
                     'Sorry, only store owner can add new enquiries.'
                     )
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     enquiries = Enquiry.objects.all()
 
@@ -62,7 +62,7 @@ def edit_enquiry(request, enquiry_id):
     """ Edit an enquiry """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owner can edit enquiries.')
-        return redirect(reverse('home'))
+        return redirect(reverse('products'))
 
     enquiry = get_object_or_404(Enquiry, pk=enquiry_id)
 

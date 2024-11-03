@@ -3,10 +3,9 @@ from django import forms
 
 class ContactForm(forms.Form):
     """
-    Contact form entries for contacting the club.
+    Contact form for requests.
     All entries are validated. Names are checked if they contain
     numbers or special characters (front-end validation).
-    https://stackoverflow.com/q/13587392/15098344
     """
 
     first_name = forms.CharField(

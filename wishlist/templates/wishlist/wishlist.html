@@ -38,9 +38,7 @@
                 {% else %}
                 <a href="{% url 'product_detail' wishlist_item.product.id %}"
                     aria-label="Takes the user to the wishlist. Noimage substitute picture is displayed.">
-                    <img class="card-img-top img-fluid card-image" src="{{ MEDIA_URL }}noimage.png"
-                        alt="{{ wishlist_item.product.title }}">
-                </a>
+                    <img class="card-img-top img-fluid card-image" src="{% static 'images/default.jpg' %}" alt="{{ wishlist_item.product.title }}"></a>
                 {% endif %}
             </div>
         </div>
@@ -88,8 +86,8 @@
             <div class="text-center my-3">
                 <div class="col-12">
                     <a href="{% url 'remove_from_wishlist' wishlist_item.product.id %}"
-                        aria-label="Removes a product to wishlist" class="btn btn-outline-navy-reverse mb-2"><i
-                            class="fas fa-heart"> </i> Remove From Wishlist
+                        aria-label="Removes a product to wishlist" class="btn btn-outline-navy-reverse mb-2">
+                        <i class="fas fa-heart"  style="color: #ff0000;"></i> Remove From Wishlist
                     </a>
                     <form class="form" action="{% url 'add_to_bag' wishlist_item.product.id %}" method="POST">
                         {% csrf_token %}

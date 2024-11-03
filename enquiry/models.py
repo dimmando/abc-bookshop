@@ -14,7 +14,7 @@ class Enquiry(models.Model):
 
     class Meta:
         """ Order Enquiries from newest to oldest """
-        ordering = ['-created_on']
+        ordering = ['created_on']
         verbose_name_plural = 'Enquiries'
 
     def __str__(self):
