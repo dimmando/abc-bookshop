@@ -28,8 +28,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('newsletter/', include('newsletter.urls')),
-    # path('djrichtextfield/', include('djrichtextfield.urls')),
-    path('summernote/', include('django_summernote.urls')),
     path('contact/', include('contact.urls')),
     path('wishlist/', include('wishlist.urls')),
     path('bookstoremanagement/', include('bookstoremanagement.urls')),
