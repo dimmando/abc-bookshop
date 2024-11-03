@@ -86,7 +86,7 @@ def all_products(request):
                 | Q(author__icontains=query)
                 | Q(category__name__icontains=query)
                 | Q(ean__icontains=query)
-                | Q(isbn__icontains=query)
+                | Q(ISBN__icontains=query)
             )
             products = products.filter(queries)
 

@@ -64,7 +64,7 @@ main {
     top: 0;
     left: 0;
     position: fixed;
-    background: #EDFFD9;
+    background: #f0ffe0;
     z-index: -1;
 }
 
@@ -200,7 +200,7 @@ a.category-badge>span.badge:hover {
 /* Toasts  */
 .message-container {
     position: fixed;
-    top: 100px;
+    top: 103px;
     right: 10px;
     z-index: 99999999999;
 }

@@ -22,7 +22,7 @@
                 <div class="image-card-detail d-flex flex-column  align-items-center">
                     <a href="{{ product.image.url }}" target="_blank"
                         aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed">
-                        <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
+                        <img class="card-img-top img-fluid card-image shadow px-0 py-0" src="{{ product.image.url }}"
                             alt="{{ product.title }}">
                     </a>
                     {% if product.new_arrival or product.is_sale %}
@@ -41,9 +41,9 @@
                     {% endif %}
                 </div>
                 {% else %}
-                <a href="{% static 'images/default.png' %}" target="_blank"
+                <a href="{% static 'images/default.jpg' %}" target="_blank"
                     aria-label="Takes the user to the detail page of the chosen book. Noimage substitute picture is displayed">
-                    <img class="card-img-top img-fluid card-image" src="{% static 'images/default.png' %}"
+                    <img class="card-img-top img-fluid card-image" src="{% static 'images/default.jpg' %}"
                         alt="{{ product.title }}">
                 </a>
                 {% endif %}
@@ -51,12 +51,12 @@
                     {% if product in customer_wishlist %}
                     <a href="{% url 'remove_from_wishlist' product.id %}"
                         aria-label="Adds a product to wishlist - Remove From Wishlist"
-                        class="btn btn-outline-navy-reverse"><i class="fa-solid fa-heart" style="color: #ff0000;"></i> Remove From Wishlist
+                        class="btn btn-outline-navy-reverse"><i class="fa-solid fa-heart"></i> Remove From Wishlist
                     </a>
                     {% else %}
                     <a href="{% url 'add_to_wishlist' product.id %}"
                         aria-label="Adds a product to wishlist - Add to wishlist"
-                        class="btn btn-outline-navy-reverse"><i class="fa-regular fa-heart" style="color: #ff0000;"></i> Add To Wishlist
+                        class="btn btn-outline-navy-reverse"><i class="fa-regular fa-heart"></i> Add To Wishlist
                     </a>
                     {% endif %}
                 </div>
@@ -86,7 +86,19 @@
                             {{ product.category.friendly_name }}</a></span>
                 </div>
                 {% endif %}
-                <p class="mb-0"><i class="fa-solid fa-child"></i> {{ product.by_age }}</p>
+                
+                {% if product.by_age %}
+                    <div class="d-flex align-items-center">
+                        {% if product.by_age == 'schoolchildren' %}
+                        <i class="fa-solid fa-child"> </i> <p class="mb-0 ml-1 text-black"> {{ product.by_age|capfirst }}</p>
+                        {% elif product.by_age == 'students' %}
+                        <i class="fa-solid fa-graduation-cap"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                        {% elif product.by_age == 'professionals' %}
+                        <i class="fa-solid fa-flask"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
                 {% if product.is_sale %}
                 <div class="d-flex justify-content-between">
                     <del>

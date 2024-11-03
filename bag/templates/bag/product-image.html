@@ -2,6 +2,6 @@
     {% if item.product.image %}
     <img class="img-fluid rounded bag-item-image" src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
     {% else %}
-    <img class="img-fluid rounded bag-item-image" src="{% static 'images/default.png' %}" alt="{{ item.product.title }}">
+    <img class="img-fluid rounded bag-item-image" src="{% static 'images/default.jpg' %}" alt="{{ item.product.title }}">
     {% endif %}
     <!-- End of product image -->

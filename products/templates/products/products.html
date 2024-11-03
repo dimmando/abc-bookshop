@@ -274,8 +274,19 @@
                                                 {{ product.category.friendly_name }}</a></span>
                                     </div>
                                     {% endif %}
-                                    <p class="mb-0 text-black"><i class="fa-solid fa-child"></i> {{ product.by_age }}
-                                    </p>
+
+                                    {% if product.by_age %}
+                                    <div class="d-flex align-items-center text-black">
+                                        {% if product.by_age == 'schoolchildren' %}
+                                        <i class="fa-solid fa-child"> </i> <p class="mb-0 ml-1 text-black"> {{ product.by_age|capfirst }}</p>
+                                        {% elif product.by_age == 'students' %}
+                                        <i class="fa-solid fa-graduation-cap"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                                        {% elif product.by_age == 'professionals' %}
+                                        <i class="fa-solid fa-flask"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                                        {% endif %}
+                                    </div>
+                                    {% endif %}
+
                                     <div class="d-flex align-items-center">
                                         {% if product.rating %}
                                         <div class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
@@ -316,13 +327,13 @@
                             {% if product in customer_wishlist %}
                             <a href="{% url 'remove_from_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Remove From Wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="fa-solid fa-heart" style="color: #ff0000;"></i> Remove From
+                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"></i> Remove From
                                 Wishlist
                             </a>
                             {% else %}
                             <a href="{% url 'add_to_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Add to wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="fa-regular fa-heart" style="color: #ff0000;"></i> Add To
+                                class="btn btn-outline-navy-reverse"><i class="far fa-heart"></i> Add To
                                 Wishlist
                             </a>
                             {% endif %}
