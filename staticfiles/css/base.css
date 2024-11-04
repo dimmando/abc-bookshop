@@ -482,6 +482,7 @@ input[name='q']::placeholder {
 }
 
 /* Footer */
+
 .navigation,
 .help {
     display: none;
@@ -557,7 +558,6 @@ a.text-reset {
         font: 14px Helvetica, Arial, sans-serif;
         width: 100%;
     }
-
 }
 
 /* Medium screen devices (768px and above) */
