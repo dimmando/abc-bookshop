@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block extra_title %} | Terms And Conditions {% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Terms And Conditions -->
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col text-center mt-3 pt-3">
+            <h2 class="logo-font">Terms And Conditions</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col my-4">
+
+        
+
+        </div>
+    </div>
+</div>
+
+<div class="btt-button shadow-sm bg-navy rounded-circle border border-white">
+    <a href="" class="btt-link d-flex h-100"
+        aria-label="The arrow takes the user to the very top of the page">
+        <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+    </a>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+$('.btn-link')
+    .click(function (e) {
+            window.scrollTo(0,0);
+        }
+    );
+</script>
+
+{% endblock %}
