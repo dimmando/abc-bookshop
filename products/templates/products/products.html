@@ -327,13 +327,13 @@
                             {% if product in customer_wishlist %}
                             <a href="{% url 'remove_from_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Remove From Wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart"></i> Remove From
+                                class="btn btn-outline-navy-reverse"><i class="fas fa-heart" style="color: #ff0000;"></i> Remove From
                                 Wishlist
                             </a>
                             {% else %}
                             <a href="{% url 'add_to_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Add to wishlist"
-                                class="btn btn-outline-navy-reverse"><i class="far fa-heart"></i> Add To
+                                class="btn btn-outline-navy-reverse"><i class="far fa-heart" style="color: #ff0000;"></i> Add To
                                 Wishlist
                             </a>
                             {% endif %}
