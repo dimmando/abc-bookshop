@@ -6,29 +6,6 @@
                 HOME
             </a>
         </li>
-        <!-- Sorting by price, rating and category -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}"
-                id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Books
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc"
-                    aria-label="Takes the user to the products sorted by price in ascending order."
-                    class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc"
-                    aria-label="Takes the user to the products sorted by rating in descending order."
-                    class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=title&direction=asc"
-                    aria-label="Takes the user to the products sorted by name in ascending order."
-                    class="dropdown-item ">By Name</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc"
-                    aria-label="Takes the user to the products sorted by category in ascending order."
-                    class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" aria-label="Takes the user to all the products."
-                    class="dropdown-item">All Books</a>
-            </div>
-        </li>
         <!-- Sorting by subject -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5"
