@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/bag/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=languages</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=medicine</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=history</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?new=True</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?sale=True</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?specials=True</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/enquiry/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/contact/contact</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/2/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/2/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/4/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/4/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/5/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/5/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/6/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/6/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/3/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/3/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/7/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=/wishlist/add/7/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/bookstoremanagement/privacy_policy/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/bookstoremanagement/terms_and_conditions/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/newsletter/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=languages&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=languages&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=languages&amp;age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=medicine&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=medicine&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=medicine&amp;age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=history&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=history&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?category=history&amp;age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?new=True&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?new=True&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?new=True&amp;age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?sale=True&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?sale=True&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?sale=True&amp;age=professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?specials=True&amp;age=schoolchildren</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?specials=True&amp;age=students</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/products/?specials=True&amp;age=Professionals</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F2%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F4%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F5%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F6%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F3%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd%2F7%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F2%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F4%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F5%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F6%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F3%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://abcbookshop-78b85b076be8.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd%2F7%2F</loc>
+  <lastmod>2024-11-05T21:54:42+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

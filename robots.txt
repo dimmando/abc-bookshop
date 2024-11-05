@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://abcbookshop-78b85b076be8.herokuapp.com/sitemap.xml
