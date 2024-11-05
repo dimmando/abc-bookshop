@@ -31,3 +31,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+
+""" Cutom header naming """
+admin.site.site_title = "ABC Bookshop"
+admin.site.index_title = "Administration panel"
+admin.site.site_header = "ABC Bookshop administrator panel"
