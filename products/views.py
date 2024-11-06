@@ -10,6 +10,7 @@ from reviews.models import Review
 from reviews.forms import ReviewForm
 from checkout.models import Order, OrderLineItem
 from profiles.models import UserProfile
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def all_products(request):
@@ -21,6 +22,7 @@ def all_products(request):
     sort = None
     direction = None
     current_category = None
+    paginate_by = 8
 
     # Product sorting by category, rating and sales price
     if request.GET:
@@ -91,6 +93,16 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
+    # Pagination
+    paginator = Paginator(products, paginate_by)
+    page = request.GET.get('page', 1)
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     context = {
         'products': products,
