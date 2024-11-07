@@ -103,3 +103,36 @@ Also the functionality of the ABC Bookshop website was checked as well by differ
 
   Small parts of JavaScript were included into html-file base.html. 
   No separated JavaScript file were used in the project.
+
+  ## LightHouse report
+
+  Using lighthouse in devtools I confirmed that the website is performing well, accessible and colors and fonts chosen are readable.
+  
+  ![Home Page Lighthouse Desktop](documentation/lighthouse_home_page.png)
+---
+
+## Testing user stories
+ 
+User Story |  Test | Pass
+--- | --- | :---:
+I want to easily understand the main purpose of the site. | I can read about type of organization and services provided on the About page. | &check;​
+I want to be able easily navigate through the website | I can find the content required either by navigate pages using switchers at the bottom of the main page or using Search form at the top in navigation section. | &check;​
+I want to see some details like descriptions and prices to compare it with the others. | I can see each property details as I can ckick on link under the title and short description of each property card.| &check;
+I can Register on this site so I can Sign In into it and Logout from there. | I really can Register on this site by go to Register page and then I can Sign In into it and Logout from there. | &check;
+As a Returning Visitor and real estate owner I can fill in a form with details about my property to propose it everyone. | I can go to Add property page, fill in a form with details about my property and submit it. | &check;
+As a Returning Visitor, registered and logged in user I can see full list of my own real estate, separated by each individual property with their details. | When I registered and logged in I can go to My property page and see full list of my own real estate, separated by each individual property with their details. | &check;
+As a Frequent and registered user I can edit property details added by me earlier. | I can update all info regarding each of my property pressing button Edit either on Detailed view page of my own property or into My property page choosing which exact property from the list to Edit. | &check;
+As a Frequent and registered user I can delete property I added before. | I can delete each of my property separately pressing button Delete either on Detailed view page of my own property or into My property page choosing which exact property from the list to Delete. | &check;
+
+## Bugs
++ ### Solved bugs
+    Bugs were found during working with form because of the Crispy Forms fields are hard to manage. Needed to correct display Current image when editing (if present) or display placeholder instead or even print No image yet message when you only add new property (there were the bugs).
+    
+        *Solutions:* I solved it by using ChatGPT.com help and changing widget for images behaviour and establish some conditions logic.
+
++ ### Unsolved bugs
+    None.
+
++ ### Mistakes
+    No mistakes were found.   
+---
