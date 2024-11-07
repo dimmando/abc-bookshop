@@ -48,4 +48,4 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         Wishlist = apps.get_model('wishlist', 'Wishlist')
         Wishlist.objects.create(user_profile=user_profile)
     # Existing users: just save the profile
-    instance.userprofile.save()
+    instance.user_profile.save()
