@@ -37,7 +37,18 @@ In order to confirm the correct functionality, responsiveness, and appearance:
     ![Main Page](documentation/Pixel-7-Pro-480x3461.png)
 
 
-+ The functionality of the ABC Bookshop website was checked as well by different users registered on it.
+### Manual testing
+
+  - I used manual testing throughout the whole development phase of the project. Mainly:
+    - I deployed early to avoid any last minute issues. With the live site, I could check responsivness from early on different devices.
+    - I used validators to check my HTML, CSS and backend code.
+    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria.
+
+### Automated Testing
+
+I had not managed to do automated testing for this application, but I plan to make it a regular part of my development process in my future projects.
+
+Also the functionality of the ABC Bookshop website was checked as well by different users registered on it.
 
 ---
 ## Validator testing

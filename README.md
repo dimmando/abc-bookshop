@@ -38,10 +38,10 @@ ABC Bookshop provides a range of educational books for all ages. ABC Bookshop st
 ABC Bookshop was designed as a B2C - Business to Customer model - where the customer buys directly from the business. There are no intermediaries. This model enables direct communication with the customer and provides space for flexibility and quick reactions and adaptability to the customer's needs.
 
 ## Marketing Techniques
-It is absolutely necessary to have online presence and recognition to be able to attract new customers and build a strong customer base. One of the ways to achieve this is through social platforms, e.g. the Facebook platform. Social media can be a great tool for attracting new customers and communicating with the current ones, if done correctly.
+It is absolutely necessary to have online presence and recognition to be able to attract new customers and build a strong customer base. One of the ways to achieve this is through social platforms, e.g. the Facebook or Instagram platform, etc. Social media can be a great tool for attracting new customers and communicating with the current ones. I chose Facebook as a main communication mechanism.
 
 * Facebook Page
- A commercial Facebook page was created to make the potential customers aware of the business, its goals and to create a community around book lovers. We hope that through regular engagement with potential customers through posts, and other activities, we will be able to attract new customers. Facebook page will help us keep in touch with the current customers and provide a way for communication with new ones. We will be announcing new arrivals, featured products or special sales on this platform. Also when a new article is released/published, the users will be informed. When a new live reading session for children (which are very popular and will contribute to the organic growth of the store) takes place, the users will be informed about this upcoming event on our Facebook page. In the future we are considering using targeted ads, once our platform is robust enough.
+ Due to Facebook doesn't allow me to create a test page for this project I created a mock up as it's real Facebook page for marketing purposes. The goal for a Facebook page is to create a community around around our ABC Bookshop and to increase commercial possibilities. I hope that through regular engagement with potential customers through posts, and other activities, we will be able to attract new customers. Facebook page will help us keep in touch with the current customers and provide a way for communication with new ones. We will be announcing new arrivals or special sales on this platform.
 
 <details><summary><b>Facebook Page</b></summary>
 
@@ -51,324 +51,72 @@ It is absolutely necessary to have online presence and recognition to be able to
 
 * Content marketing
 
-There are several articles present on the ABC Bookshop website with the purpose of attracting potential customers to read up on the topic of the importance of reading and ways to improve children's reading skills. At the moment, all of the articles are guest articles, but in the future we plan to add our own content and engage more deeply with the users.
+There are book review possibilities to attract potential customers read them and be involved into reading and measurement.
 
 * E-mail Marketing
-Another form of online marketing is through email. ABC Bookshop users can opt to subscribe to the company's newsletter. The content of the newsletter is kept short and fresh with the purpose to attract the customers to the store. New arrivals, featured products, sales will be announced through this platform. Also if there is a new interesting article or a new reading session, we will be letting the customers know. Lastly, the users will receive discount codes for their next purchase (future feature). [Mailchimp](https://mailchimp.com/) was used to set up the newsletter subscription functionality.
+Another form of online marketing is via mailing lists. ABC Bookshop users can opt to subscribe to the company's newsletter. New arrivals, sales or other activities will be announced through this platform. [Mailchimp](https://mailchimp.com/) was used to set up the newsletter subscription functionality.
 
 * Search Engine Optimization (SEO)
-If a website does not come up in the google search on one of the top positions, it is very unlikely the users will ever visit is. Having sufficient traffic is a prerequite for customer conversion. One of the ways how to come up higher in searches is through Search Engine Optimization. If the ranking is good/high, there is a higher return on investment.
 
-Therefore it is ABC Bookshop's goal to include content which is reliable, profesional and relevant. Descriptive Meta Tags have been implemented on the site in hope of increasing the SEO. Most of them are a result of several brainstorming sessions, but I also used [Wordtracker](https://www.wordtracker.com/) to add more content specific keywords. I made sure to use not only short, but also long-tail words. The Meta Tags used:
+ABC Bookshop's goal is to include itself to the top of serch results and be at least on the first page of serch results content. Descriptive Meta Tags were implemented on the site to do it. I used [Wordtracker](https://www.wordtracker.com/) to find out content specific keywords. I tried to use not only short, but also long-tail words.
 
-    * Meta Description - "ABC Bookshop is a webstore that sells books for young children taking not only their age but also their reading skills into account. Encourage your young reader. Come and find the best book for your child."
-
-    * Meta Keywords - books by-age, books by-reading skills, reluctant reader, keen reader, struggling reader, avid reader, age appropriate books, slow reader, happy reader, fast reader, exciting books for kids, children's bookshop online, online children's bookshop, encourage children to read, child hates reading
-
-The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site. These files are essential for SEO optimization. The sitemap.xml was generated using [XML Sitemap Generator](https://www.xml-sitemaps.com/) and included in the root folder of the project. A robots.txt file was created in the root folder to instruct search engine crawlers on how to access and crawl the site's pages.
+The site also includes a sitemap.xml and robots.txt to make sure that the search engines can find and crawl the pages on the site. The sitemap.xml was generated using [XML Sitemap Generator](https://www.xml-sitemaps.com/) and placed in the root folder of the project and robots.txt as well. In real life to generate dynamical sitemap.xml file and have it visible for Google Search we need to create a special functionality with .py file in root project folder that will generate content for it and have right url record in urls.py to be found.
 
 ## Project Management
 
-I have been using GitHub projects for organizing my project, tracking user stories and epics. It is a very helpful tool which enabled me to keep all my PBIs in one place and to tackle them gradually.
+I have been using [GitHub's Projects](https://github.com/users/dimmando/projects/3) for organizing my project and tracking user stories. It is a very helpful tool to have Kanban board and it's quite alternative to [Trello](https://trello.com/) product for the same purposes.
 
-At the beginning of the project, I spent a fair amount of time on project planning, on thinking it through. I created wireframes and a sketch of my models first. Having the wireframes and the ERD model to refer to when working on the project was both essential and very helpful. Any time I was getting lost or confused, I could consult them and figure out how to proceed.
+First of all I spent some time on project planning, on thinking about it. I created wireframes and having them and the ERD model I found it very helpful and felt myself more confident.
 
-Reflecting back on my experience with PP4, I felt more confident about planning of the sprints and I planned them right at the beginning. I did make minor changes to the content of each milestone, but in general my sprints followed this logic: focus on essential features first (mvp), add additional features if there is enough time. I also focused on issues with high priority and only when the project was taking shape, would I add a could have or lower priority features. I also improved in guessing have many story points should each user story/dev tasks take, but I had not yet planned to do a given number of points withing the sprint.
+When I am finished with the project, I planned to go back and analyze how many userstory points I was able to achieve compared with planned for my future project planning.
 
-When I am finished with the project, I plan to go back and analyze how many story points I was able to achieve in a sprint and will use this information for my future project planning.
+I tried to make mock up of my readme and testing files at the same as I finished each user stories.
 
-I used Milestones for organizing my sprints. I know it is not ideal, but the Project tool does not have a great alternative to tracking sprints. Thus, I would create my milestones, give them a description, assign Epics and User stories to them and add a finish date for each of them. My sprints were usually one week long Monday to Friday, but sometimes I had to move some issues to the next sprint due to a problem which took me longer to solve than I had expected or I managed to squeeze in some US story into the current sprint.
+I tried to fix bugs, small or big at once not to be accumulated too much left at the end.
 
-From the beginning I tried to update my readme and testing files, especially as regards credits, sources and bug-fixes. I left the last two sprints for readme and testing file completion as it is a very time consuming task to document everything.
+Primarily, I focused on completing majority of the must-haves, and in later stages of the product development I would consider should and could-haves. At the same time, I was identifying user stories which would have to change into won't haves and be left for future development. Each of the user stories got labels such as: Must have, Should have, Could have, Won't have.
 
-I tried to fix bugs, small or big, as I went so that they would not be too much left at the end. Also it gave me a great relief when the app would start working again after having displayed error upon error.
-
-As you will see from my progress, I have always kept MVP in mind. At first I made sure the backend functionality was in place, then I started working on other crucial elements and when I had some extra time, I added some nice to have features, but always keeping in mind meeting the core project requirements first.
-
-This is visible especially with the product filtering, where at first I developed only a basic filtering functionality by skill level and some other model attributes. It took me a long time until I got around doing the age filtering, but I felt this was an essantial feature of the app and needed to be done. Again, I started with a simple age filter which did not take any other parameters in the account. Finally, towards the end of my development, I managed to create filters which take more than one criterion into account and I am very happy with the result. In the meantime I would add other essential features to comply with the mvp requirements, like newsletter, contact form, articles, enquiries and others.
-
-Overall, primarily, I focused on completing majority of the must-haves, in later stages of the product development I would consider some should and could-haves. At the same time, I was identifying user stories which would have to change into won't haves and be left for future development.
-
-Breaking up the project in Epics, User stories and essentially into tasks has been very helpful and enabled me to tackle the project in managable bite-size steps. Using acceptance criteria as a part of my user stories helped me define what was necessary to achieve before I could consider the user story done. Each user story also contained detailed tasks which had to be fulfilled before labeling the story as done.
-
-Each of the user stories would get labels such as: must have, should have, could have, won't have; number of story points; epic ; user story/dev task/bug; high/medium/low priority. Each user story would be assigned to its respective epic and milestone (sprint).
-
-
-
-### GitHub Projects Board
-
-I used Projects tool inbuilt in GitHub, [GitHub's Projects](https://github.com/users/lucia2007/projects/9), to help me manage the scope of the project, to track my progress and record any bugs, but also to jot down any ideas that were relevant for the application development. These ideas were either later applied in the code or dismissed if they did not seem to enhance the user's experience or improve the development process. The issues were being fluidly moved from PBIs into In Progress and then either into Done or Won't have. Anytime I came across a bug, I noted it down with as many details as possible in the bug section and continuously worked on fixing them.
-
-Whenever I had an idea related to the project, I would jot it down in the "Backlog section/Brainstorming" section. Then I would go through the issues and choose the ones suitable for the current Milestone. I would convert the simple ideas into proper User Stories with acceptance criteria and necessary tasks and move them to the To Do/In Progress section. I would label each User Story with the following labels: MoSCoW lables, number of story points, relevant Epic and Milestone, priority, user story/dev task/bug-fix. The dev tasks were usually centered around the backend part of the project, getting the frameworks set up and functional, or fixing bugs, writing documentation or testing.
-
-When my Milestone with its deadline was set up (Sprint), I would assign relevant Epics with their User Stories to it. On a day-to-day basis I would choose 2 or 3 things that were currently being worked on and I would place them in the "In Progress" section. I also took some extra time, usually on a Friday afternoon or Monday morning to do a more thorough clean up of the project board so that it would remain usable and not be too cluttered. (Sometimes I wrote the same bug/issue down more than once or I had more than 2-3 issues in my In Progress section.) If I became stuck on a task for whatever reason or depended on external input, I moved it to "Blocked". At last, when a task was completed, I would one more time check against the acceptance criteria, tick each of the finished tasks and move it to the "Done" section. As soon as an issue was identified as "won't have" for the current project version, I moved it to the won't do section on the project board.
-
-The Project tool has been very benefitial for my development process, especially because I could rely on having all the relevant information in one place. I would write down the sources to be credited, or bugs to be fixed or ideas on how to improve some part of the application, so I did not have to worry about having forgotten something essential.
-
-In the future, I should able to surmise the amount of story points for each Epic/User story more easily and thus plan my Sprints more effectively. In the past I noted down the bugs only retrospectively. This time around I tried to create an issue for each bug right away and tried to connect a commit to the issue, but I didn't do it quite consistently. I hope this process becomes a second nature to me in the future and I won't be forgetting to attach the issue number to a commit. What was definitely benefitial, was that I documented each bug and its solution in the testing file as soon as I had solved it.
-
+The Project tool has been very benefitial for my development process, especially because I could rely on having all the relevant information in one place.
 
 ### MoSCoW Prioritization
 
-I had tried to apply MoSCoW principles in my development but more on a project basis than on a sprint basis. In my first sprints I solely focused on meeting must-have dev tasks and user stories and when most of my necessary features were in place, only then did I start incorporating should-haves or could-haves. As I went along, I also indentified won't-haves which were either to be fully abandoned or left for future development.
+I tried to apply MoSCoW principles in my development but more on a project basis than on a sprint basis. First of all I focused on meeting must-have dev tasks and user stories. Then I started incorporating should-haves and then could-haves. As I went along, I also indentified won't-haves which left for future development.
 
-- Must Have: must be delivered (max 60% of user stories)
-- Should Have: add significant value, but not crucial (20% of stories)
-- Could Have: small impact if not implemented (20% of stories)
-- Won't Have: not crucial for this iteration
-
-Unfinished user stories can be found in either PBis, to-do or the won't have section of my project board.
-
+- Must Have: must be delivered (around 60%)
+- Should Have: add significant value, but not crucial (around 20%)
+- Could Have: small impact if not implemented (around 20%)
+- Won't Have: not crucial for this project
 
 ### Milestones
 
-I split up my project development into the following milestones:
-
-1. Project planning, project set up, Django Allauth
-2. Product Model set up/Page skeleton/Database set up
-3. Shopping Bag/Checkout page/User Profile/STRIPE
-4. Deploy/Newsletter sign up
-5. Blog/Contact Form/Wishlist
-6. Age segmentation/Add more products to the shop/bookshop management/Bug fixes/Confirm deletion
-7. Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/Fiinish up Footer/Navbar content/
-8. and  9. Testing/Readme/Marketing/SEO/missing files
-10. Project Submission
-
-For more details please see the sprints (milestones) below.
-
-
-### Epics
-
-Each milestone was split into epics. Some milestones contain just one or two epic, others contain more.
-
-Each epic would contain several user stories. Each user story has a description, acceptance criteria and tasks which had to be ticked before the user story could be closed and moved to done. For details please refer to my [Projects](https://github.com/users/lucia2007/projects/9). DT - developer task, US - User Story
-
-- EPIC Registration and User Account
-  - DT Preparation for Project Planning
-  - US User Registration
-  - US Login/Logout Functionality
-  - US Account Email Validation
-  - US User Profile
-- EPIC Viewing and Navigation
-  - US Navigation
-  - US Visual confirmation for shopping bag/wishlist items
-  - US Home Page
-  - US View All Products
-  - US Product Detail View
-  - US Product Category/Specials Filter
-  - US Footer
-  - US Optimize footer for small devices
-  - US Add Terms and Conditions, Privacy Policy
-- EPIC Book Details
-  - US Add Products to the Database
-  - US Add Read more/Read less functionality
-- EPIC Shopping Bag Functionality
-  - US Shopping Bag
-  - US Checkout
-  - US Add Products to Bag
-  - US Order Sorting
-  - US Shopping bag icon/functionality available from all books view
-  - US Sales Price Functionality
-  - US User Notifications (Toasts)
-  - US Order Email Confirmation
-- EPIC Filtering
-  - US Filtering according to skill levels, special offers features
-  - US Product Category/Specials Filter
-  - US Add age segmentation filtering
-  - US Add age segmentation for all product views and filters
-  - US Add double filtering for products according to different segments&age
-  - US Make the chosen age parameter visually clear
-- EPIC Sorting and Searching
-  - US Search Functionality
-  - US Product Sorting Functionality
-  - US Sorting according to sales price
-- EPIC Articles
-  - US View all Articles
-  - US View Article detail
-  - US Add Articles to the app (add, edit, delete functionality)
-  - US Like/Unlike Articles
-  - US View Likes
-- EPIC Customer Communication and Advertisement
-  - US Contact
-  - US Newsletter
-  - US Create Facebook Page
-  - US Frequently Asked Questions - FAQ
-- EPIC Error Pages
-  - DT Add customized 403, 404, 500 Error Pages
-- EPIC Wishlist
-  - US Wishlist
-  - US Wishlist icon changes colour when there is an item in the wishlist
-  - US Wishlist visual confirmation
-- EPIC Store Management
-  - US bookshop Management
-  - US Toasts without Shopping Bag
-  - US Admin Dashboard
-  - US Confirm Deletion
-
-
-
-### Sprints (Milestones)
-
-My sprints were planned out as follows:
-
-**Sprint #1 - 04/09 - 08/09**
-
-Project planning, project set up, Django Allauth
-
-In the first sprint I focused on project planning: I created wireframes, ERD schema, wrote down user stories, planned sprints and set up the project including the Django allauth. Most of this sprint was about setting up the backend and the tasks were labeled as Dev Task (DT). The following tasks where a part of this sprint:
-
-- DT - Preparation for Project Planning
-- DT - Set Up Development Environment
-- US - User Registration
-- US - User Login/Logout Functionality
-- US - Account Email Validation
-
-**Sprint #2 - 11/09-15/09**
-
-Product Model set up/Page skeleton/Database set up
-
-In this sprint, I focused on creating the backend functionality for displaying products on offer, enable filtering and sorting and search functionality.
-
-- US - Home Page
-- US - Navigation
-- US - Footer
-- US - View All Products
-- US - Product Detail View
-- US - Product Sorting Functionality
-- US - Search Functionality
-- US - Filtering according to Skill Level, Special Offers, Featured
-- US - Product Category/Specials Filter
-- DT - Add Products to the database
-
-**Sprint #3 - 18/09-22/09**
-
-Shopping Bag/Checkout page/User Profile/STRIPE
-
-I created shopping bag and checkout page functionality, customized user registration/login functionality, started working on implementation of Stripe payment system.
-
-- US - Shopping Bag
-- US - Checkout
-- US - User Notifications (Toasts)
-- US - Order Email Confirmation
-- US - Add Products to Bag
-- DT - Add customized 403, 404 and 500 Error Pages
-- Several bug-fixes (details in testing.md)
-
-**Sprint #4 - 25/09-29/09**
-
-Deploy/Newsletter sign up/CSS style improvements/Basic Admin Dashboard
-
-In this sprint I focused on early deploymentmadding newletter sign up functionality, improving app styling and added basic admin dashboard for adding products.
-
-- US - Newsletter
-- US - Visual Confirmation for shopping bag/wishlist items
-- Several bug fixes (details in testing.md)
-
-**Sprint #5 - 02/10 - 06/10**
-
-Blog/Contact Form/Wishlist
-
-In this sprint I added Blog, contact form and wishlist and made small improvements to admin dashboard.
-
-- US - Admin Dashboard
-- US - Wishlist Icon Changes Colour when there is an Item in the Wishlist
-- US - View Article detail
-- US - View All Articles
-- US - Add Articles to the App (add, edit, delete functionality)
-- US - View Likes
-- US - View Like/Unlike articles
-- US - Wishlist
-- US - Contact
-- US - Shopping Bag icon/functionality availabla from all books view
-
-**Sprint #6 - 09/10 - 13/10**
-
-Age segmentation/Add more products to the shop/bookshop management/Bug fixes/Confirm deletion
-
-In this sprint I managed to basic filtering by age, I added more products to the shop, significantly improved bookshop Management, fixed bugs and added confirm deletion messages to relevant places.
-
-- US - Order Sorting
-- US - Confirm Deletion
-- US - Toasts without Shopping Bag
-- US - Add Age segmentation Filtering
-- US - Add Read more/read less Functionality
-- US - FAQs
-- US - bookshop Management
-
-**Sprint #7 - 16/10 - 20/10**
-
-Facebook mockup/Marketing (keywords)/Finish Age segmentation/Code refactoring/HTML Error Fixes/Finish up Footer/Navbar content
-
-In this milestone I focused on finishing the last features, I started refactoring the code and fixing HTML errors (duplicate ID's). I also finished up the Footer and Navbar Content. At my mentor's suggestion, I added a product review functionality.
-
-- US - Add Age Segmentation for all Product Views and Filters
-- US - Add Terms and Conditions
-- US _ Sales Price Functionality
-- US - Optimize Footer for Small Devices
-- US - Create Facebook Page
-- US - Sorting according to Sales Price
-- US - Add Dobule Filtering for Products according to Different Segments & Age
-- US - Make the Chosen Age Parameter Visually Clear
-- US - Product Review
-
-**Sprint #8 + #9 - 23/10 - 03/11**
-
-Testing/Readme/Marketing/SEO/Missing Files
-
-The main focus of these sprints was to update the readme file and do through testing of the whole app, including python, javascript, html validation, user story testing, lighthouse testing. Towards the end of the two weeks, I will add the robots.txt, sitemap.xml, and focus on improving of the SEO score.
-
-- US - Lets the user review a book only once
-- US - Wishlist visual confirmation
-- US - There are no past orders/no books found
-
-**Sprint #10 - 06/11 - 07/11**
-
-Project Submission
-
-The above listed user stories above had all been finished. There are several user stories which had not been done and are postponed for future development, others were moved into "won't do" category. For more details see Future Features section.
-
-I realize that my attempt at agile project development was not perfect and I know I will do several things differently in the future, but it has definitely been an enriching experience which helped me manage the project's scope. In the future I plan to make more detailed Epics and to plan my sprints according to user story points, as now I have a better idea how long different tasks take me and I can make better, if imperfect, estimates.
-
-
+I didn't split my project development into milestones because not so many features/tasks are in place and not a lot of time was spent doing the project. It was shortened in time course with quick pace.
 
 ## Database Schema (ERD)
 
-Before I started writing any code, I spent a lot of time on planning and thinking things through. One part on which I spent a considerable amount of time, was creating the ERD diagram and designing each model and their relationships. I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema. As you can tell, not all my arrows are pointing into the right direction as I was still a bit confused about the relationships and how the models were related to each other, but I believe that if I had to create the schema now, it would be much easier and a more straightforward process.
+Here you can find [ERD Diagram](/documentation/erd.png)
 
-[ERD Diagram Lucid Charts](/readme-images/ERD_PP5.png)
+I used [Lucid Charts](https://lucidchart.com/) to create my ERD schema.
 
-This ERD schema was instrumental for creating all the necessary models for this app. Creating this schema helped me realize the relationships between different apps and models and clarified what kind of fields each of the model components would need.
+This ERD schema was instrumental for creating all the necessary models for this project. Creating this schema helped me realize the relationships between different applications and models and understand what fields each of the model needs.
 
-Models/Apps used in this project:
-- UserProfiles - used to collect and update contact/delivery information for users
-- Checkout - For creating/updating orders
-- bookshop Management - for managing books/enquiries/articles from a user friendly interface
-- Contact - for contacting the store via a online form
-- Newletter - for signing up for a regular newsletter
-- Products - for managing books, filtering, sorting and more
-- Article - for adding/editing/deleting articles
+Models used in this project:
+- Checkout (Order, OrderLineItem) - For creating/updating orders
 - Enquiry - for adding/updating/removing FAQ and their answers
+- Products (Category, Product) - for managing books, filtering, sorting and more
+- UserProfile - used to collect and update contact/delivery information of the customers
+- Reviews - for adding a review to book the customer have bought and not reviewed before
 - Wishlist - for adding/removing items from the user's wishlist
-- allauth - used for sign in/out/up functionality of the site
-- Reviews - for adding a review to a book the customer had bought and not reviewed before
-
-I had not implemented the comments model to Articles (possible future feature), but at my mentor's suggestion, I focused on adding the book reviews as we found this feature essential for an online store to increase customer's ability to interact with the application. Comments model for the Articles was not deemed necessary at this stage, as the current articles are guest articles. When we start adding our own content in the future, we will add a possibility for users to comment on the new posts.
-
-
+- Allauth - used for signing in/out/up functionality
 
 # User Experience (UX/UI)
 
 **Primary Goal**
 
-The primary goal of this application is to enable a purchase of age appropriate literature which takes a child's skill level and maturity into account. The shopping experience needs to be seemless and smooth.
-
-**Visitor Goals**
-
-As a visitor I want to find a fun and enticing book for my child/grandchild/pupil which will encourage them to make reading a regular and important part of their lives.
+The primary goal of this project is to enable a purchase educational books. The shopping experience needs to be seemless and smooth.
 
 **First Time Visitor**
 
-  - A user sees the main features of the app on the welcome page: find a book by different search criteria, read an article or contact us.
+  - A user sees the main features of the app on the welcome page: find a book by different search criteria or contact us.
   - A user can register, log in and logout.
   - An anonymous user can:
     -  browse the page
@@ -376,7 +124,6 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
     -  sort books by category, rating and price (sales price is taken into account)
     -  filter the books by skill level or/and age
     -  identify products in specials
-    -  read articles and view number of likes
     -  read book reviews if present
     -  contact the store by filling in a form
     -  read FAQs
@@ -396,105 +143,36 @@ As a visitor I want to find a fun and enticing book for my child/grandchild/pupi
   - On top of that, a logged in user can:
     -  leave a review for books they had previously bought
     -  a user can review a book only once
-    -  like/unlike articles
     -  create a wishlist
     -  save their information in the Profile section under the profile icon and update it
     -  view their past orders
     -  save their contact details for the future
   - An admin user can:
-    - manage books, articles, enquiries in the bookshop management section (full CRUD functionality)
-    - confirm deletion of products/articles or enquiries
+    - manage books, enquiries in the bookshop management section (full CRUD functionality)
+    - confirm deletion of products or enquiries
     - can approve a review
-    - admin user can see unpublished articles and save them as drafts
 
 **Returning Visitor**
 
-  - A user can easily sign in and access majority of the features of the website (like articles, leave a review, create a wishlist)
+  - A user can easily sign in and access majority of the features of the website (leave a review, create a wishlist)
   - A user with filled in profile details can make a fast purchase.
-  - A user can easily find books on sale/new arrivals or featured products
+  - A user can easily find books on sale/new arrivals
 
 **Frequent Visitor**
 
   - A user can easily find a suitable book and make a quick purchase thanks to the saved personal and billing information and make use of any user features.
 
 
-## User Stories
-| **User Stories** | **Description** | **Status** |
-| --- | --- | --- |
-| US - Navigation | As a **user** I can **locate the navigation area** so that I can **easily access different parts of the website**. | &#9745; |
-| US - Footer | As a **user**, I can **access relevant information about the business, contact information and social media links without having to scroll back to the top of the page** so that I can **learn about terms and conditions, contact the eshop and follow the eshop online**. | &#9745; |
-| US - User Registration | As a **site user** I can **choose to register on the site and have my own account with personalized information** so that I can **easily review my past activities on the site and smoothly do another purchase**. | &#9745; |
-| US - User Login/Logout Functionality | As a **site user** I can **login in and logout of my account** so that I can **access personalized data, special features and keep my online activities safe**. | &#9745; |
-| US - Account Email Validation | As a **site user** I can **register my email and receive a validation link via email** so that I **can create an account to track my spending and purchases**. | &#9745; |
-| US - Shopping Bag | As a **customer** I can **choose the quantity of the product and add it to the shopping bag** so that I can **buy the product later**. | &#9745; |
-| US - Add Products to Bag | As a **customer** I can **click on Add to Bag button on product detail page** so that I can **add the product and its chosen quantity to the shopping bag**, | &#9745; |
-| US - Shopping bag icon/functionality avaiable from all books view | As a **user** I can **buy a chosen book directly from the all product view** so that I don't **have to go to product detail page**. | &#9745; |
-| US - Search Functionality | As a **site user**, I can **enter keywords into the search** bar so that I can **search for a specific item**. | &#9745; |
-| US - View All Products | As a **customer**, I can **easily scroll through all products** so that I can **see all the products the eshop offers". | &#9745; |
-| US - Product Detail View | As a **customer** I can **click on an individual product** so that I can **see the title, author, book description, price, segments by age and skill level etc**. | &#9745; |
-| US - Checkout | As a **customer** I can **securely checkout the products in my shopping bag** so that I can **finish my purchase**. | &#9745; |
-| US - Order Email Confirmation | As a **customer** I can **receive an email after purchase** so that I can **confirm my purchase and keep a record of my order**. | &#9745; |
-| US - Order sorting | As a **user** I can **view my past orders in descending order** so that I can **easily find my most recent orders**. | &#9745; |
-| US - User Profile | As a **site user** I can **register and create an account** so that I can **save my personal details, see order history and checkout quickly**. | &#9745; |
-| US - User Notifications (Toasts) | As a **customer** I can **view messages/toasts which inform me about my actions** so that I can **be sure that a certain action/choice took place**. | &#9745; |
-| US - Filtering according to skill levels, special offers features | As a **customer** I can **sort the products according to reading skill level, according to different special features** so that I can **quickly find the products I'm interested in** | &#9745; |
-| US - Product Sorting Functionality | As a **customer** I can **sort the products according to the price, category name and rating** so that I can **see the products sorting according to the chosen criterion**. | &#9745; |
-| US - Product Category/Specials Filter | As a **site user** I can **click on the options in the navbar** so that I can **see the chosen categories/subsegments to make my search quicker.** | &#9745; |
-| US - Specials (on sale/featured/new arrival) Visual Confirmation | As a **customer** I can **easily see which products are in the specials category** so that I can **avail of specials deals**. | &#9745; |
-| US - Admin Dashboard | As an **admin** I can **add/edit/remove products to the store offer through admin dashboard** so that I **don't have to do it through the admin panel** | &#9745; |
-| US - bookshop Management | A an **admin/superuser** I can access the bookshop management page** so that I **can add/edit/delete Articles, Enquiries and Products without having to access the django admin**. | &#9745; |
-| US - View all articles | As a **user** I can **see all articles** so that I can **choose which one I am most interested in and educate myself on the top of the importance of reading**. | &#9745; |
-| US - View Article detail | As a **user** I can **click on the article card** so that I can **read the article and see extra details**. | &#9745; |
-| US - Add Articles to the app (add, edit, delete functionality) | As a **user** I can **read several interesting articles about why reading skills are important and how to encourage children to read** so that I can **understand the issue better**. | &#9745; |
-| US - View likes | As a **user** I can **like/unlike an article** so that I can **express my opinion**. | &#9745; |
-| US - View Like/Unlike articles | As a **signed in user** I can **like/unlike articles and be visually informed about my action** so that I can **express my views**. | &#9745; |
-| US - Add Read more/Read less functionality | As a **user** I can **choose if I want to read the whole book description** so that I **am not overwhelmed by too much text**. | &#9745; |
-| US - Wishlist | As a **customer** I can **add desired products into my wishlist** so that I can **be reminded later which products were interesting for me** | &#9745; |
-| US - Wishlist icon changes colour when there is an item in the wishlist | As a **customer** I can **distinguish if there is something in my wishlist** so that I can **be informed about my actions**. | &#9745; |
-| US - Contact | As a **user** I can **contact the store by filling in a form directly on the webpage** so that I **don't have to send an email through a different app**. | &#9745; |
-| US - Frequently asked questions - FAQ | As a **user** I can **easily find answers to frequently asked questions** so that I **don't have to call or write to the store owners to find out the information**. | &#9745; |
-| US - Add age segmentation filtering | As a **customer** I can **easily find books in a chosen age category** so that I **don't have to search all the products**. | &#9745; |
-| US - Add age segmentation for all product views and filters | As a **user** I can **use age segmentation in combination with category or specials filters** so that I can **easily find an age appropriate book in the chosen subsegment**. | &#9745; |
-| US - Add double filtering for products according to different segments&age | As a **user** I can **sort the products by age within any chosen subsegment** so that I can **quickly find an age appropriate book**. | &#9745; |
-| US - Make the chosen age parameter visually clear | As a **user** I can **easily say if an age filter has been applied to the current template** so that I **don't have to study the product list for confirmation**. | &#9745; |
-| US - Sales price functionality | As a **user** I can **buy products on sale** so that I can **save money and enjoy my shopping more**. | &#9745; |
-| US Sorting according to sales price | As a **user** I can **see the products correctly ordered by their effective price** so that I **can easily identify the cheapest/most expensive products**. | &#9745; |
-| US - Add Terms and Conditions, Privacy Policy | As a **user** I can **learn what the company's Terms and Conditions and Privacy Policy are** so that I can **understand my rights and obligations in connection to the store**. | &#9745; |
-| US - Newsletter | As a **user** I can **subscribe for a newsletter service** so that I can **be informed about any news, new development on the ABC Bookshop app**. | &#9745; |
-| US - Visual confirmation for shopping bag/wishlist items | As a **customer** I can **easily see if there is something in my wishlist or shopping bag** so that I can **be informed about my current and previous actions**. | &#9745; |
-| DT - Add customized 403, 404, 500 Error pages | As a **developer** I can **display customized error pages** so that they **correspond to the overall site design**. | &#9745; |
-| US - Confirm Deletion | As an **superuser/admin** I can **confirm deletion of products or articles** so that I don't **accidently delete a product or article**. | &#9745; |
-| US - Toasts without shopping bag | As a **user/admin** I can **be informed about my actions without the shopping bag showing** so that I can **clearly and easily see the action confirmation and not be overwhelmed by too much unnecessary information**. | &#9745; |
-| US - Optimize footer for small devices | As a **user** I can **click on Help button in footer which contains all relevant links** so that I **don't have to scroll too far**. | &#9745; |
-| US - Create Facebook page | As a **user** I can **visit the store's facebook page** so that I can **have access to the newest posts and connect with other followers of the bookshop**. | &#9745; |
-| US - Product Review | As a **user** I can **add a review for a book I had bought previously by clicking on the item in my order history** so that I can **express my opinion**. | &#9745; |
-| US - Lets the user review a book only once | As a **user** I can **review a product only once** so that I can **share my opinion but not spam others**. | &#9745; |
-| US - Wishlist visual confirmation | As a **user** I can **clearly see that I already have a book in my wishlist** so that I don't **try to add it again**. | &#9745; |
-| US - There are no past orders/no books found | As a **user** I can **be informed that I entered a wrong key word or that there are no orders in my history** so that I **don't have to guess what went wrong**. | &#9745; |
-
 ## Design Choices
 
-When I started creating the web application, I had a very clear idea of what I wanted to achieve. I wanted to create an attractive enticing eshop where the user would easily find a great book for their young reader. Firstly, I designed wireframes, then I proceeded to create the ERD schema and subsequently I focused on writing down the user stories and planned all my sprints.
-
-**Color Scheme**
-
-I got the idea for the main hero image and color theme when travelling in France in the summer and having come across the happy child reading a book mural by Jef Aerosol. It took me a while to find the image online and refine it using the [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make it a bit more sharp. The image I found had orange background, so I used it as one of main background colors and found the complementary colors by using [Coloors](https://coolors.co/).
-
-<details><summary><b>Color Scheme</b></summary>
-
-![Color Scheme](/readme-images/color_scheme.png)
-</details><br>
-
-**Typography and Icons**
-
-As regards the icons, I mainly used fontawesome icons, as they are easy to use and are consistent in style. I used 'Raleway' font from Google fonts and it seemed to work well with the bookshop theme. The font is also easily legible which is a very important requirement.
-
+Usually we start any internet business we try to create an attractive web-site where the user can easily find something they like. Firstly, I designed wireframes, then I was thinking which color scheme is best.
 
 ## Design Prototype (Wireframes)
 
 I started by creating wireframes which is always a great process because it helps me think in much more detail about what I want to accomplish. As you will see from my wireframes I tried to work on my design including the hero picture and color scheme from the very beginning. I came across the wonderful picture of the girl happily reading a book when travelling in France and later I was able to find it on the internet. The author of this amazing mural is Jef Aerosol.
 
 The wireframes include a view for desktop, tablet and mobile to take responsives into accout. Many of the simple pages look the same on all devices (sign in, sign up, logout, forms,...). For those whose layout is different on smaller devices, I created a sample wireframe. The main difference in smaller screen is a collapsed NavBar accessible at the hamburger icon and the footer where the items stack up. The number of displayed books and other relevant features also responds to the size of the screen.
+
 
 I used [Figma](https://www.figma.com) which is an excellent tool for making wireframes.
 
@@ -617,14 +295,19 @@ I used [Figma](https://www.figma.com) which is an excellent tool for making wire
 </details><br>
 
 
+**Color Scheme**
 
-## Site Structure
+I got the idea for the main hero image and color theme when travelling in France in the summer and having come across the happy child reading a book mural by Jef Aerosol. It took me a while to find the image online and refine it using the [AI Image Sharpener](https://vanceai.com/sharpen-ai/) to make it a bit more sharp. The image I found had orange background, so I used it as one of main background colors and found the complementary colors by using [Coloors](https://coolors.co/).
 
-The ABC Bookshop site structure is very straightforward and easy to understand. A collapsible navbar is present at the top with a search bar, different features (sorting, filtering, articles, contact form, ... ) of the website are accesssible directly from the navbar. The main content follows with a responsive footer at the bottom of the page. A back to top bottom is present on pages, where the content is too long.
+<details><summary><b>Color Scheme</b></summary>
 
-The ABC Bookshop site changes depending on if the user is signed in or not. If the user is not signed in, they can see a Register/Login buttons, whereas if they are signed in, they can see a Profile Icon/Logout buttons. A signed in user can also see a Wishlist Icon in the navbar which changes color based on the fact if it's empty or if there are some items in the wishlist. If staff member is signed in, they can also see a bookshop Management tab under their profile icon in the NavBar. Also edit/delete buttons are present on different pages if an admin user is signed in. More details can be found in the respective feature section.
+![Color Scheme](/readme-images/color_scheme.png)
+</details><br>
 
-Also here are different features which become available only for a signed in user (like/unlike articles, add a book review, access order history).
+**Typography and Icons**
+
+As regards the icons, I mainly used fontawesome icons, as they are easy to use and are consistent in style. I used 'Raleway' font from Google fonts and it seemed to work well with the bookshop theme. The font is also easily legible which is a very important requirement.
+
 
 
 # Features
@@ -637,7 +320,6 @@ Also here are different features which become available only for a signed in use
 | Account  | n/a | 'My Profile' option including order history and delivery information |
 | All Products  | Items can be viewed and added to Bag, Wishlist not available, Reviews visible | Wishlist available, possible to review products |
 | Categories/Filtering/Sorting   | Visible | Visible|
-| Articles   | Visible, like/unlike not available | Visible, like/unlike available |
 | Search  | Visible | Visible |
 | Contact Us/Newsletter | Visible | Visible |
 | Enquiries | Visible | Visible |
@@ -645,7 +327,7 @@ Also here are different features which become available only for a signed in use
 
 ## CRUD Functionality
 
-Customers have full CRUD functionality for the shopping bag (viewing/adding/updating the amount/removing products from bag). They may also edit their delivery details if they are registered, logged-in users. Logged in customers may also view/add and remove products from their Wishlist and add reviews to books they had previously bought. Logged in users can like/unlike articles. ABC Bookshop Admin has access to the Admin Dashboard which allows them full CRUD for Books/Articles/Enquiries Management.
+Customers have full CRUD functionality for the shopping bag (viewing/adding/updating the amount/removing products from bag). They may also edit their delivery details if they are registered, logged-in users. Logged in customers may also view/add and remove products from their Wishlist and add reviews to books they had previously bought. ABC Bookshop Admin has access to the Admin Dashboard which allows them full CRUD for Books/Enquiries Management.
 
 ## Features Details
 
@@ -655,7 +337,7 @@ At the top of the page there is a navbar. At the top there is a **delivery banne
 
 Second row contains the company's Logo, which is clickable and takes the user to the Home page.
 
-In the middle of the second row, there is a search bar which allows for searching books. This is not available for articles or enquiries (future feature).
+In the middle of the second row, there is a search bar which allows for searching books. This is not available for enquiries (future feature).
 
 When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are available.
 
@@ -706,8 +388,7 @@ In the last row of the navbar the user can click the following links:
 - Home - takes the user to the home page
 - Books - product sorting by price, category, name and rating is available.
 - Skill level - category filtering available (reluctant, keen and avid reader)
-- Special offers - new arrivals, featured products, on sale
-- Articles - takes the user to view all articles
+- Special offers - new arrivals, on sale
 - Contact us - takes the user to the contact form
 
 <details><summary><b>Navbar Bottom Row</b></summary>
@@ -837,42 +518,6 @@ If an admin is signed in, the edit/delete buttons are visible as well. For detai
 If a book has been reviewed before, there is also an expandable button with a review icon and number of reviews present. For more details please see the Reviews section.
 
 If a book image is clicked, the image opens in a new tab for a more detailed view.
-
-**Articles**
-
-Originally I had thought I would include a blog like functionality where users would be able to add articles and comments. Later, I realized that at this stage I wanted only admin to add content so that the quality and content of articles would be aligned with the website's purpose.
-
-In the future I might implement an option for users to add articles as well. In this case, each article would have to be approved by the admin before publishing. At this point I would also add the possibility to add comments to the articles.
-
-At the moment, a signed in user can like/unlike articles. The number of likes is automatically adjusted.
-
-**All articles**
-
-All articles view currently contains four article cards with an image, author, excerpt, time of publication and number of likes. Cards are clickable and take the user to the article detail view.
-
-<details><summary><b>All Articles</b></summary>
-
-![All Articles](/readme-images/all_articles.png)
-</details><br>
-
-**Article Detail View**
-
-On the article detail page, there is the article image which is clickable and opens in a new tab. The article title follows with the author's name.
-
-At the end of the article a clickable source link is present which opens the original article in a new tab.
-
-Number of likes are visible at the bottom of the page and if the current user had liked the article before, the heart is solid. Only a signed in user can like/unlike the article and the number of likes updates automatically.
-
-Back to articles button takes the user to all articles page.
-
-If an admin is signed in edit/delete buttons are present on both all article cards and the article detail view. More details follow in the admin section.
-
-As some of the articles are quite long, there is a back to top button present in the right bottom corner.
-
-<details><summary><b>Article Detail</b></summary>
-
-![Article Detail](/readme-images/article_detail.png)
-</details><br>
 
 **Contact Form**
 
@@ -1059,20 +704,13 @@ When an admin user is logged in, the bookshop Management link is available under
 ![bookshop Management Page](/readme-images/bookshop_management_page.png)
 </details><br>
 
-An admin can add/edit/remove books from the store, add/edit/remove articles, add/edit/remove enquiries.
+An admin can add/edit/remove books from the store, add/edit/remove enquiries.
 
-When an admin user is signed in, edit/delete buttons are present on the book, article and enquiry cards.
-
-Admin can also see drafts of articles and enquiries in their view.
+When an admin user is signed in, edit/delete buttons are present on the book and enquiry cards.
 
 <details><summary><b>Edit/Remove Buttons Books</b></summary>
 
 ![Edit/Remove Buttons Books](/readme-images/edit_delete_books.png)
-</details><br>
-
-<details><summary><b>Edit/Remove Button Articles</b></summary>
-
-![Edit/Remove Buttons Articles](/readme-images/edit_delete_articles.png)
 </details><br>
 
 <details><summary><b>Edit/Remove Buttons FAQs</b></summary>
@@ -1117,47 +755,6 @@ When the admin wants to delete a book, they are shown a deletion modal to provid
 <details><summary><b>Book Deleted</b></summary>
 
 ![Book Deleted](/readme-images/book_deleted.png)
-</details><br>
-
-**Article Management**
-
-**Add Article**
-
-When the admin clicks an Add Article button, they are taken to an add an article form. Input is validated (more details in the testing file).
-
-<details><summary><b>Add Article Form</b></summary>
-
-![Add Article Form](/readme-images/add_article.png)
-</details><br>
-
-The admin can choose to save the article as a draft in which case only admin can see it in the all articles view.
-
-If an article without an image is added, a placeholder image is used in its place.
-
-<details><summary><b>Placeholder Article Image</b></summary>
-
-![Placeholder Article Image](/readme-images/draft_article.png)
-</details><br>
-
-When the user clicks on the edit button, they are taken to all articles view, where the edit buttons are visible and clickable.
-
-On the edit article form, the article details are already prefilled and can be amended.
-
-<details><summary><b>Edit Article Form</b></summary>
-
-![Edit Article Form](/readme-images/edit_article.png)
-</details><br>
-
-When the admin wants to delete an article, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the article is deleted.
-
-<details><summary><b>Confirm Article Deletion</b></summary>
-
-![Confirm Article Deletion](/readme-images/confirm_article_deletion.png)
-</details><br>
-
-<details><summary><b>Article Deleted</b></summary>
-
-![Article Deleted](/readme-images/article_deleted.png)
 </details><br>
 
 **Enquiries/Enquiries Management**
@@ -1243,7 +840,7 @@ At the bottom of the page there is a footer. For easy of use, all main navigatio
 ![Terms of Use](/readme-images/terms_of_use.png)
 </details><br>
 
-Both Privacy Policy and Terms of Use were generated by using termly.io. As this is a free service, the documents are not of the highest quality and contain html errors as documented in the testing file.
+Both Privacy Policy and Terms of Use were generated by using termly.io.
 
 - Shipping Info (can be found in FAQs)
 
@@ -1265,7 +862,7 @@ The footer is responsive and was optimized for small devices by collapsing some 
 
 **Newsletter**
 
-In order for customers to stay informed about the goings in our bookshop we provide a newsletter functionality. This feature was developed through [Mail Chimp](https://mailchimp.com/) which is a very friendly and easy to use service. We plan to send out emails once a month, announcing sales, new arrivals or featured books. In the future we plan to add an occasional discount code and inform our customers about live book readings for the kids.
+In order for customers to stay informed about the goings in our bookshop we provide a newsletter functionality. This feature was developed through [Mail Chimp](https://mailchimp.com/) which is a very friendly and easy to use service. We plan to send out emails once a month, announcing sales, new arrivals. In the future we plan to add an occasional discount code and inform our customers about live book readings for the kids.
 
 When the user clicks on Subscribe Now! button, they are taken to a separate page, where they can easily fill in their email and subscribe.
 
@@ -1290,7 +887,7 @@ The unsubscribe functionality is not currently available, but it is on the list 
 
 **Deletion Modals**
 
-For deleting products, articles and enquiries, the user is always asked to confirm their choice to delete the chosen item to avoid accidental deletion. This is an example of the application of defensive programming. Images of deletion modals are included under bookshop Management section. This functionality was not added to wishlist remove buttons, as the product is not deleted from the database and can easily be added back to the wishlist.
+For deleting products and enquiries, the user is always asked to confirm their choice to delete the chosen item to avoid accidental deletion. This is an example of the application of defensive programming. Images of deletion modals are included under bookshop Management section. This functionality was not added to wishlist remove buttons, as the product is not deleted from the database and can easily be added back to the wishlist.
 
 **403, 404 and 500 Error Pages**
 
@@ -1391,23 +988,6 @@ Following packages and libraries were installed and are located in requirements.
 # Testing
 
 To test the aspects of the application, I used manual testing and external validators. Both manual and external testing are a part of a separate [testing file](/TESTING.md).
-
-### Manual testing
-
-  - I used manual testing throughout the whole development phase of the project. Mainly:
-    - I deployed early to avoid any last minute issues and checked my local and life site periodically. With the live site, I could check responsivness from early on on different devices.
-    - I continuously attended to any errors which I came across during the development process.
-    - I used validators to check my HTML, CSS and backend code.
-    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria. Only after I had met all the conditions, did I move the user story to done.
-
-### External Testing
-
-  All external testing is a part of a separate [testing file](/TESTING.md).
-
-### Automated Testing
-
-I had not managed to do automated testing for this application, but I plan to make it a regular part of my development process in my future projects.
-
 
 
 # Project Deployment
@@ -1892,10 +1472,8 @@ Take the following steps to create a clone of a project:
 - [500.html error view](https://github.com/davidcalikes/sensical.ie/blob/main/sensical/urls.py)
 - [RichTextField settings - Daisy's Recipe Tutorial](https://www.youtube.com/watch?v=_GNvmwvvS70)
 - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) for general quidance and mainly for the shopping bag and checkout functionalities
-- [I think therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) for articles functionality
-- [FreeFido](https://github.com/amylour/FreeFido_v2) for articles and wishlist functionalities
+- [FreeFido](https://github.com/amylour/FreeFido_v2) for wishlist functionalities
 - [I Think, Therefore I Blog Child first](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/dabfed30d1fc4d078b6de270117dbe50/?child=first)
-- [Contact Form](https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend) - this link seems to not work anymore
 - [Read more/Read less buttons](https://codepen.io/joserick/pen/ooVPwR)
 - [Property decorator Django - final_price functionality ](https://www.andreadiotallevi.com/blog/how-to-use-the-property-decorator-in-python-and-django)
 - [Inspiration for final_price functionality](https://github.com/Iris-Smok/Joyfulbookshop-PP5/blob/main/books/views.py)
