@@ -25,85 +25,88 @@
         <!-- Display items in wishlist and their details -->
         {% if customer_wishlist %}
         {% for wishlist_item in customer_wishlist %}
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 pb-2">
-            <div class="image-container">
-                {% if wishlist_item.product.image %}
-                <div class="image-card-detail d-flex flex-column  align-items-center">
-                    <a href="{% url 'product_detail' wishlist_item.product.id %}"
-                        aria-label="Takes the user to the wishlist. A picture of the book is displayed.">
-                        <img class="card-img-top img-fluid card-image" src="{{ wishlist_item.product.image.url }}"
-                            alt="{{ wishlist_item.product.title }}">
-                    </a>
-                </div>
-                {% else %}
-                <a href="{% url 'product_detail' wishlist_item.product.id %}"
-                    aria-label="Takes the user to the wishlist. Noimage substitute picture is displayed.">
-                    <img class="card-img-top img-fluid card-image" src="{% static 'images/default.jpg' %}" alt="{{ wishlist_item.product.title }}"></a>
-                {% endif %}
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column wishlist-text">
-            <div class="product-details-container mt-5">
-                <p class="mb-0"><i class="fa-solid fa-book"></i>
-                    {{ wishlist_item.product.title }}</p>
-                <p class="mb-0"><i class="fa-solid fa-at"></i> {{ wishlist_item.product.author }}</p>
-                <p class="mb-0"><i class="fa-solid fa-child"></i> {{ wishlist_item.product.by_age }}</p>
-                {% if wishlist_item.product.is_sale %}
-                <div class="d-flex justify-content-between">
-                    <del>
-                        <p class="lead mb-0 text-left font-weight-bold text-black">
-                            €{{ wishlist_item.product.price }}
-                        </p>
-                    </del>
-                    <p class="lead mb-0 text-right font-weight-bold text-danger">
-                        €{{ wishlist_item.product.sale_price }}
-                    </p>
-                </div>
-                {% else %}
-                <p class="lead mb-0 text-left font-weight-bold text-black">
-                    €{{ wishlist_item.product.final_price }}
-                </p>
-                {% endif %}
-                {% if wishlist_item.product.new_arrival or wishlist_item.product.feature_product or wishlist_item.product.is_sale %}
-                <div class="specials-icons-card-detail">
-                    {% if wishlist_item.product.new_arrival %}
-                    <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
-                        alt="An image of a ringing bell to notify of new arrivals">
-                    {% endif %}
-                    {% if wishlist_item.product.feature_product %}
-                    <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
-                        alt="An image of a star to notify of featured books">
-                    {% endif %}
-                    {% if wishlist_item.product.is_sale %}
-                    <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
-                        alt="An image of a start to notify of items on sale">
+            {% for product in wishlist_item.product.all %}
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 pb-2">
+                <div class="image-container">
+                    {% if product.image %}
+                    <div class="image-card-detail d-flex flex-column align-items-center">
+                        <a href="{% url 'product_detail' product.id %}"
+                            aria-label="Takes the user to the wishlist. A picture of the book is displayed.">
+                            <img class="card-img-top img-fluid card-image" src="{{ product.image.url }}"
+                                alt="{{ product.title }}">
+                        </a>
+                    </div>
                     {% else %}
-                    <div class="specials-icons-card d-none"></div>
+                    <a href="{% url 'product_detail' product.id %}"
+                        aria-label="Takes the user to the wishlist. Noimage substitute picture is displayed.">
+                        <img class="card-img-top img-fluid card-image" src="{% static 'images/default.jpg' %}" alt="{{ product.title }}"></a>
                     {% endif %}
                 </div>
-                {% endif %}
             </div>
-            <div class="text-center my-3">
-                <div class="col-12">
-                    <a href="{% url 'remove_from_wishlist' wishlist_item.product.id %}"
-                        aria-label="Removes a product to wishlist" class="btn btn-outline-navy-reverse mb-2">
-                        <i class="fas fa-heart" style="color: #ff0000;"></i> Remove From Wishlist
-                    </a>
-                    <form class="form" action="{% url 'add_to_bag' wishlist_item.product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-outline-navy mb-2"
-                                aria-label="Add the product to bag.">
-                                <i class="fas fa-shopping-bag"></i> Add to Bag
-                            </button>
-                        </div>
-                        <input type="hidden" name="quantity" value="1" data-item_id="{{ wishlist_item.product.id }}">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </form>
+            <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column wishlist-text">
+                <div class="product-details-container mt-5">
+                    <p class="mb-0"><i class="fa-solid fa-book"></i>
+                        {{ product.title }}</p>
+                    <p class="mb-0"><i class="fa-solid fa-at"></i> {{ product.author }}</p>
+                    <p class="mb-0"><i class="fa-solid fa-child"></i> {{ product.by_age }}</p>
+                    {% if product.is_sale %}
+                    <div class="d-flex justify-content-between">
+                        <del>
+                            <p class="lead mb-0 text-left font-weight-bold text-black">
+                                €{{ product.price }}
+                            </p>
+                        </del>
+                        <p class="lead mb-0 text-right font-weight-bold text-danger">
+                            €{{ product.sale_price }}
+                        </p>
+                    </div>
+                    {% else %}
+                    <p class="lead mb-0 text-left font-weight-bold text-black">
+                        €{{ product.final_price }}
+                    </p>
+                    {% endif %}
+                    {% if product.new_arrival or product.feature_product or product.is_sale %}
+                    <div class="specials-icons-card-detail">
+                        {% if product.new_arrival %}
+                        <img src="{% static 'images/new_arrivals_icon.svg' %}" class="specials-icons"
+                            alt="An image of a ringing bell to notify of new arrivals">
+                        {% endif %}
+                        {% if product.feature_product %}
+                        <img src="{% static 'images/featured_icon.svg' %}" class="specials-icons"
+                            alt="An image of a star to notify of featured books">
+                        {% endif %}
+                        {% if product.is_sale %}
+                        <img src="{% static 'images/sale_icon.svg' %}" class="specials-icons-sale"
+                            alt="An image of a star to notify of items on sale">
+                        {% else %}
+                        <div class="specials-icons-card d-none"></div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="text-center my-3">
+                    <div class="col-12">
+                        <a href="{% url 'remove_from_wishlist' product.id %}"
+                            aria-label="Removes a product to wishlist" class="btn btn-outline-navy-reverse mb-2">
+                            <i class="fas fa-heart" style="color: #ff0000;"></i> Remove From Wishlist
+                        </a>
+                        <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-navy mb-2"
+                                    aria-label="Add the product to bag.">
+                                    <i class="fas fa-shopping-bag"></i> Add to Bag
+                                </button>
+                            </div>
+                            <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+            {% endfor %}
         {% endfor %}
+
         <!-- End of wishlist items -->
         {% else %}
         <div class="col-12">

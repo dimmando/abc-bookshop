@@ -29,55 +29,32 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
-    if Wishlist.objects.filter(
-                            user_profile=user_profile,
-                            product=product).exists():
-        messages.warning(
-                        request,
-                        f'You already have { product.title } in '
-                        ' your wishlist.')
-        context = {
-            'on_page': True,
-        }
-
-        return redirect(reverse('products'), context)
+    wishlist, created = Wishlist.objects.get_or_create(user_profile=user_profile)
+    if product in wishlist.product.all():
+        messages.warning(request, f'You already have {product.title} in your wishlist.')
     else:
-        wishlist_item = Wishlist.objects.create(
-                                                user_profile=user_profile,
-                                                product=product
-                                                )
-        messages.success(
-                        request,
-                        'You have successfully '
-                        f'added { wishlist_item.product.title } to '
-                        'your wishlist.'
-                        )
-        context = {
-            'on_page': True,
-        }
+        wishlist.product.add(product)
+        messages.success(request, f'You have successfully added {product.title} to your wishlist.')
 
-        return redirect(reverse('wishlist'), context)
-
+    return redirect(reverse('wishlist'))
+    
 
 @login_required
 def remove_from_wishlist(request, product_id):
+    
     """ Remove the chosen product from the wishlist """
 
     product = get_object_or_404(Product, pk=product_id)
     user_profile = UserProfile.objects.get(user=request.user)
-    wishlist_item = Wishlist.objects.get(
-                                        user_profile=user_profile,
-                                        product=product
-                                        )
 
-    wishlist_item.delete()
-    messages.success(
-                    request,
-                    f'{product.title} was successfully removed from '
-                    ' your wishlist.'
-                    )
-    context = {
-        'on_page': True,
-    }
+    try:
+        wishlist = Wishlist.objects.get(user_profile=user_profile)
+        if product in wishlist.product.all():
+            wishlist.product.remove(product)
+            messages.success(request, f'{product.title} was successfully removed from your wishlist.')
+        else:
+            messages.warning(request, f'{product.title} is not in your wishlist.')
+    except Wishlist.DoesNotExist:
+        messages.error(request, 'You do not have a wishlist yet.')
 
-    return redirect(reverse('wishlist'), context)
+    return redirect(reverse('wishlist'))
