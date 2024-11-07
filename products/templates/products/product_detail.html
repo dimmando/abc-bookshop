@@ -100,6 +100,30 @@
                         {% endif %}
                     </div>
                 {% endif %}
+                
+                {% if product.number_of_pages %}
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 text-black pt-1 pb-1"><small><strong>Number of pages:</strong> {{ product.number_of_pages }}</small></p>
+                    </div>
+                {% endif %}
+
+                {% if product.size %}
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 text-black pb-1"><small><strong>SIZE:</strong> {{ product.size }}</small></p>
+                    </div>
+                {% endif %}
+
+                {% if product.ISBN %}
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 text-black pb-1"><small><strong>ISBN:</strong> {{ product.ISBN }}</small></p>
+                    </div>
+                {% endif %}
+                
+                {% if product.ean %}
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 text-black pb-1"><small><strong>EAN:</strong> {{ product.ean }}</small></p>
+                    </div>
+                {% endif %}
 
                 {% if product.is_sale %}
                 <div class="d-flex justify-content-between">
