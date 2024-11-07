@@ -39,7 +39,8 @@ class Product(models.Model):
     author = models.CharField(max_length=254, null=False, blank=False)
     size = models.CharField(max_length=254, null=True, blank=True)
     number_of_pages = models.PositiveIntegerField(null=True, blank=True)
-    description = models.TextField(max_length=1024, default='', null=True, blank=True)
+    description = models.TextField(
+        max_length=1024, default='', null=True, blank=True)
     price = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, blank=False, validators=[
             MinValueValidator(0.0, message=None)])
