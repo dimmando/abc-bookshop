@@ -257,8 +257,7 @@
                                     {% if product.category %}
                                     <div class="category-icon d-flex align-items-end text-black">
                                         {% if product.category.name == "languages" %}
-                                        <img class="mt-1 mb-1 category-icon-image"
-                                            src="{% static 'images/languages.svg' %}"
+                                        <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/languages.svg' %}"
                                             alt="An icon of languages subject">
                                         {% elif product.category.name == "medicine" %}
                                         <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/medicine.svg' %}"
@@ -324,10 +323,6 @@
                                 <input type="hidden" name="quantity" value="1" data-item_id="{{ product.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
-                            {% for wishlist_item in request.user.user_profile.customer_wishlist.product.all %}
-                            {{wishlist_item}}
-                            {% endfor %}
-                            
                             {% if product in request.user.user_profile.customer_wishlist.product.all %}
                             <a href="{% url 'remove_from_wishlist' product.id %}"
                                 aria-label="Adds a product to wishlist - Remove From Wishlist"

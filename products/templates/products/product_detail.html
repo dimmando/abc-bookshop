@@ -19,7 +19,7 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
-                <div class="image-card-detail d-flex flex-column  align-items-center">
+                <div class="image-card-detail d-flex flex-column align-items-center">
                     <a href="{{ product.image.url }}" target="_blank"
                         aria-label="Takes the user to the detail page of the chosen book. A picture of the book is displayed">
                         <img class="card-img-top img-fluid card-image shadow px-0 py-0" src="{{ product.image.url }}"
@@ -48,7 +48,7 @@
                 </a>
                 {% endif %}
                 <div class="text-center my-3">
-                    {% if product in customer_wishlist %}
+                    {% if product in request.user.user_profile.customer_wishlist.product.all %}
                     <a href="{% url 'remove_from_wishlist' product.id %}"
                         aria-label="Adds a product to wishlist - Remove From Wishlist"
                         class="btn btn-outline-navy-reverse"><i class="fa-solid fa-heart" style="color: #ff0000;"></i> Remove From Wishlist
@@ -69,16 +69,18 @@
                 <p class="mb-0"><i class="fa-solid fa-at"></i> {{ product.author }}</p>
                 {% if product.category %}
                 <div class="category-icon d-flex align-items-end">
-                    {% if product.category.name == "Languages" %}
+                    
+                    {% if product.category.name == "languages" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/languages.svg' %}"
                         alt="{{ product.category.friendly_name }}">
-                    {% elif product.category.name == "Medicine" %}
+                    {% elif product.category.name == "medicine" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/medicine.svg' %}"
                         alt="{{ product.category.friendly_name }}">
-                    {% elif product.category.name == "History" %}
+                    {% elif product.category.name == "history" %}
                     <img class="mt-1 mb-1 category-icon-image" src="{% static 'images/history.svg' %}"
                         alt="{{ product.category.friendly_name }}">
                     {% endif %}
+                    
                     <span class="text-black mt-1 pl-1">
                         <a class="text-black text-decoration-none"
                             href="{% url 'products' %}?category={{product.category.name}}"
@@ -90,11 +92,11 @@
                 {% if product.by_age %}
                     <div class="d-flex align-items-center">
                         {% if product.by_age == 'schoolchildren' %}
-                        <i class="fa-solid fa-child"> </i> <p class="mb-0 ml-1 text-black"> {{ product.by_age|capfirst }}</p>
+                        <i class="fa-solid fa-child"> </i> <p class="mb-0 ml-1 text-black pl-1"> {{ product.by_age|capfirst }}</p>
                         {% elif product.by_age == 'students' %}
-                        <i class="fa-solid fa-graduation-cap"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                        <i class="fa-solid fa-graduation-cap"> </i> <p class="mb-0 text-black pl-1"> {{ product.by_age|capfirst }}</p>
                         {% elif product.by_age == 'professionals' %}
-                        <i class="fa-solid fa-flask"> </i> <p class="mb-0 text-black"> {{ product.by_age|capfirst }}</p>
+                        <i class="fa-solid fa-flask"> </i> <p class="mb-0 text-black pl-1"> {{ product.by_age|capfirst }}</p>
                         {% endif %}
                     </div>
                 {% endif %}

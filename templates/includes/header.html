@@ -62,7 +62,7 @@
                     {% if request.user.is_authenticated %}
                     <a class="nav-link"
                                 href="{% url 'wishlist' %}" id="wishlist-link" aria-label="Takes the user to their wishlist">
-                        {% if customer_wishlist %}
+                        {% if request.user.user_profile.customer_wishlist.product.all %}
                         <div class="text-center">
                             <div><i class="fa-solid fa-heart fa-lg" style="color: #ff0000;"></i></div>
                         </div>
