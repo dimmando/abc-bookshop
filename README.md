@@ -168,43 +168,54 @@ Usually we start any internet business we try to create an attractive web-site w
 
 The wireframes include a view for desktop, tablet/mobile to take responsivnes into account. Many of the simple pages look the same on all devices (sign in, sign up, logout, forms,...). Only header and footer change (the same on all pages) from desktop to mobile version.
 
-**Desktop Wireframes**
+**Desktop and Tablet/Mobile Wireframes**
 
 <details><summary><b>Home Page</b></summary>
 
-![Home Page](/readme-images/homepage_desktop.png)
+![Home Page](documentation/homepage_desktop.jpg)
+
+![Home Page Mobile](documentation/homepage_mobile.jpg)
+
 </details><br>
 
 <details><summary><b>Product Detail Page</b></summary>
 
-![Product Detail Page](/readme-images/product_detail_desktop.png)
+![Product Detail Page](documentation/product_detail_desktop.jpg)
+
+![Product Detail Page Mobile](documentation/product_detail_mobile.jpg)
 </details><br>
 
 <details><summary><b>Shopping Bag</b></summary>
 
-![Shopping Bag](/readme-images/shopping_bag_desktop.png)
+![Shopping Bag](documentation/shopping_bag_desktop.jpg)
+
+
+![Shopping Bag Mobile](documentation/shopping_bag_mobile.jpg)
+
 </details><br>
 
 <details><summary><b>Checkout</b></summary>
 
-![Checkout](/readme-images/checkout_desktop.png)
+![Checkout](documentation/checkout_desktop.jpg)
+</details><br>
+
+![Checkout Mobile](documentation/checkout_mobile.jpg)
 </details><br>
 
 <details><summary><b>Admin bookshop management</b></summary>
 
-![Admin bookshop management](/readme-images/admin_bookshop_management.png)
+![Admin bookshop management](documentation/admin_bookshop_management.jpg)
+
+![Admin bookshop management mobile](documentation/admin_bookshop_mobile.jpg)
+
 </details><br>
 
 <details><summary><b>Profile</b></summary>
 
-![My Profile](/readme-images/profile_desktop.png)
+![My Profile](documentation/profile_desktop.jpg)
 </details><br>
 
-**Tablet/Mobile Wireframes**
-
-<details><summary><b>Mobile Wireframes</b></summary>
-
-![Mobile Wireframes](/readme-images/mobile_wireframes.png)
+![My Profile Mobile](documentation/profile_mobile.jpg)
 </details><br>
 
 
@@ -212,7 +223,7 @@ The wireframes include a view for desktop, tablet/mobile to take responsivnes in
 
 <details><summary><b>Color Scheme</b></summary>
 
-![Color Scheme](/readme-images/color_scheme.png)
+![Color Scheme](documentation/color_scheme.png)
 </details><br>
 
 **Typography and Icons**
@@ -242,7 +253,7 @@ When the user is not signed in, only Profile (Register/Login options only) and S
 
 <details><summary><b>Top Navbar Guest</b></summary>
 
-![Top Navbar Guest](/readme-images/top_navbar_guest.png)
+![Top Navbar Guest](documentation/top_navbar_guest.png)
 </details><br>
 
 **Logged in User**
@@ -251,33 +262,33 @@ A wishlist icon becomes available for the signed in user.
 
 <details><summary><b>Wishlist Icon</b></summary>
 
-![Wishlist Icon](/readme-images/wishlist_icon.png)
+![Wishlist Icon](documentation/wishlist_icon.png)
 </details><br>
 
 If the user signs in, they can access My Profile, where default information is saved and they can access their past orders.
 
 <details><summary><b>My Profile</b></summary>
 
-![Wishlist Icon](/readme-images/my_profile.png)
+![Wishlist Icon](documentation/my_profile.png)
 </details><br>
 
 Wishlist and Shopping bag icons change color if there is at least one product present.
 
 <details><summary><b>Wishlist/Bag Icons orange</b></summary>
 
-![Wishlist/Bag Icons orange](/readme-images/icons_orange.png)
+![Wishlist/Bag Icons orange](documentation/icons_orange.png)
 </details><br>
 
 **Collapsible Navbar**
 
 <details><summary><b>Collapsed Navbar</b></summary>
 
-![Collapsed Navbar](/readme-images/collapsed_navbar.png)
+![Collapsed Navbar](documentation/collapsed_navbar.png)
 </details><br>
 
 <details><summary><b>Hamburger Open</b></summary>
 
-![Hamburger Open](/readme-images/hamburger_open.png)
+![Hamburger Open](documentation/hamburger_open.png)
 </details><br>
 
 **Navbar Bottom Row**
@@ -290,22 +301,22 @@ In the last line of the navbar the user can click the following links:
 
 <details><summary><b>Navbar Bottom Row</b></summary>
 
-![Navbar Bottom Row](/readme-images/navbar_last_row.png)
+![Navbar Bottom Row](documentation/navbar_last_row.png)
 </details><br>
 
 <details><summary><b>Navbar Sorting</b></summary>
 
-![Navbar Sorting](/readme-images/navbar_sorting.png)
+![Navbar Sorting](documentation/navbar_sorting.png)
 </details><br>
 
 <details><summary><b>Navbar Skill Level</b></summary>
 
-![Navbar Skill Level](/readme-images/navbar_skill_level.png)
+![Navbar Skill Level](documentation/navbar_skill_level.png)
 </details><br>
 
 <details><summary><b>Navbar Specials</b></summary>
 
-![Navbar Specials](/readme-images/navbar_special_offers.png)
+![Navbar Specials](documentation/navbar_special_offers.png)
 </details><br>
 
 
