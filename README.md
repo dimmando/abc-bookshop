@@ -46,9 +46,9 @@ It is absolutely necessary to have online presence and recognition to be able to
 
    <details><summary><b>Facebook Page</b></summary>
 
-   ![Facebook Page](documentation/facebook_page.png)
-
-</details><br>
+    ![Facebook Page](documentation/facebook_page.png)
+   
+   </details><br>
 
 * Content marketing
 
