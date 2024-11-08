@@ -135,7 +135,7 @@ main {
 .btn-navy {
     background: #4c244f;
     color: white;
-    padding: 0;
+    padding: 0 7px;
 }
 
 .btn-outline-navy {

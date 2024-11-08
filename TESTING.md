@@ -155,12 +155,13 @@ As a site user I can visit the ABC Bookshop's facebook page so that I can have a
 As a site user I can receive an E-mail after purchase with details what I bought so that I can remember my purchase and find it in my mailbox. | E-mail is received by user with correct order information. | &check;
 
 
-
 ## Bugs
 + ### Solved bugs
-    Bugs were found during working with form because of the Crispy Forms fields are hard to manage. Needed to correct display Current image when editing (if present) or display placeholder instead or even print No image yet message when you only add new property (there were the bugs).
-    
-        *Solutions:* I solved it by using ChatGPT.com help and changing widget for images behaviour and establish some conditions logic.
+    I can confirm that of course a lot of bugs were found during development process because of the site complexity. I'd like to note especially interesting one of them.
+    When I tried to put variable into "if" conditional for finding a value either product exists in customer wishlist to change red heart icon state from regular to solid (or back) and implement "add" or "remove" item to wishlist it was hard to find correct expression for that variable because it's too long. 
+    It's look this: {% if product in request.user.user_profile.customer_wishlist.product.all %}
+        
+        *Solution:* I was debugging right on web-page where my icon was placed using "for" loop and additional variable to get content out (print on page) step by step from "request.user" then "request.user.user_profile" then "request.user.user_profile.customer_wishlist" and then "request.user.user_profile.customer_wishlist.product.all". Finally I cought the right value and inserted correct expression in my "if" statement and condition began working.
 
 + ### Unsolved bugs
     None.
