@@ -80,7 +80,7 @@ Also the functionality of the ABC Bookshop website was checked as well by differ
 
   * [review](documentation/pdf/review.pdf)
 
-  * [wishlist-----](documentation/pdf/wishlist.pdf)
+  * [wishlist](documentation/pdf/wishlist.pdf)
 
 + ### HTML
   Source code of all HTML-pages were tested by the official W3C validator.
