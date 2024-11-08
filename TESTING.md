@@ -101,25 +101,23 @@ Also the functionality of the ABC Bookshop website was checked as well by differ
 
 + ### HTML
   Source code of all HTML-pages were tested by the official W3C validator.
-  No errors or warnings were found when passing tests.
+  Only on Subscribe page in Mailchimp code some info and warnings were found when passing tests. No errors were found.
   Here is the PDF document that contains screenshots of all tests:
 
-  [HTML Validator](documentation/html-validation.pdf)
+  [HTML Validator](documentation/pdf/html-validation.pdf)
         
 + ### CSS
   No errors or warnings were found when passing through the official W3C (Jigsaw) validator.
   Here is the PDF document that contains screenshots of all tests:
 
-  ![CSS validator](documentation/css-valid.png)
+  ![CSS validator](documentation/pdf/css-validation.pdf)
 
 + ### JavaScript
-  No errors or warnings were found when passing through the official ______________ validator.
   Here is the PDF document that contains screenshots of all tests:
 
-  ![CSS validator](documentation/css-valid.png)
+  ![JavaScript validator](documentation/pdf/js-validation.pdf)
 
-  Small parts of JavaScript were included into html-file base.html. 
-  No separated JavaScript file were used in the project.
+  Small parts of JavaScript were also included into html-files. No problem with them found.
 
   ## LightHouse report
 
