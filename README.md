@@ -197,7 +197,6 @@ The wireframes include a view for desktop, tablet/mobile to take responsivnes in
 <details><summary><b>Checkout</b></summary>
 
 ![Checkout](documentation/checkout_desktop.jpg)
-</details><br>
 
 ![Checkout Mobile](documentation/checkout_mobile.jpg)
 </details><br>
@@ -213,23 +212,24 @@ The wireframes include a view for desktop, tablet/mobile to take responsivnes in
 <details><summary><b>Profile</b></summary>
 
 ![My Profile](documentation/profile_desktop.jpg)
-</details><br>
+
 
 ![My Profile Mobile](documentation/profile_mobile.jpg)
 </details><br>
 
-
 **Color Scheme**
 
-<details><summary><b>Color Scheme</b></summary>
+Color scheme was created ispiring strict business style. No fun color. Just business style.
 
-![Color Scheme](documentation/color_scheme.png)
-</details><br>
 
 **Typography and Icons**
 
-As regards the icons, I mainly used fontawesome icons, as they are easy to use and are consistent in style. I used 'Raleway' font from Google fonts and it seemed to work well with the bookshop theme. The font is also easily legible which is a very important requirement.
+I mainly used fontawesome icons, but some static icons in place as well.
 
+! - exclamation mark means New Arrival;
+SALE icon - means the book with reduced price.
+
+I used 'Barlow' font from Google fonts in the body and the 'Abril' font in the Logo and it seems it's work well with the ABC bookshop theme.
 
 # Features
 
@@ -258,12 +258,7 @@ When the user is not signed in, only Profile (Register/Login options only) and S
 
 **Logged in User**
 
-A wishlist icon becomes available for the signed in user.
-
-<details><summary><b>Wishlist Icon</b></summary>
-
-![Wishlist Icon](documentation/wishlist_icon.png)
-</details><br>
+A wishlist icon becomes available for the signed in user. It's regular when the Wishlist is empty and solid when at least one item in it exists.
 
 If the user signs in, they can access My Profile, where default information is saved and they can access their past orders.
 
