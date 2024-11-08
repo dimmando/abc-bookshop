@@ -52,12 +52,14 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
     </details><br>
 
+Due to all the pages use {% extends "base.html" %} their header and footer are identical. The content everywhere (except small pages like Log In, etc.) loads dynamically and styled with CSS well so rest of the pages have the same responsiveness as a main page.
+
 ### Manual testing
 
   - I used manual testing throughout the whole development phase of the project. Mainly:
-    - I deployed early to avoid any last minute issues. With the live site, I could check responsivness from early on different devices.
-    - I used validators to check my HTML, CSS and backend code.
-    - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria.
+  - I deployed early to avoid any last minute issues. With the live site, I could check responsivness from early on different devices.
+  - I used validators to check my HTML, CSS and backend code.
+  - For each of the user stories I wrote down clear acceptance criteria and tasks which had to be done to meet those criteria.
 
 ### Automated Testing
 

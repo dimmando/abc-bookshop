@@ -2,7 +2,7 @@
 
 # *ABC Bookshop*
 
-ABC Bookshop is a classic internet-shop which used as a platform for selling books especially for education purposes. It's made as a start-up and has a few book subjects but site owner can easiely add different book subjects by request and sells any.
+ABC Bookshop is a classic internet-shop which is used as a platform for selling books especially for educational purposes. It's made as a start-up and has a few book subjects but site owner can easiely add different book subjects by request and sells any.
 
 One of ABC Bookshop feature is not only sell books by different subject/category but to provide age group appropriate division for all kinds of readers.
 
