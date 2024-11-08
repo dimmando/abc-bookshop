@@ -110,12 +110,12 @@ Also the functionality of the ABC Bookshop website was checked as well by differ
   No errors or warnings were found when passing through the official W3C (Jigsaw) validator.
   Here is the PDF document that contains screenshots of all tests:
 
-  ![CSS validator](documentation/pdf/css-validation.pdf)
+  [CSS validator](documentation/pdf/css-validation.pdf)
 
 + ### JavaScript
   Here is the PDF document that contains screenshots of all tests:
 
-  ![JavaScript validator](documentation/pdf/js-validation.pdf)
+  [JavaScript validator](documentation/pdf/js-validation.pdf)
 
   Small parts of JavaScript were also included into html-files. No problem with them found.
 
