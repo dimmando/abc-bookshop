@@ -12,30 +12,45 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
     - FireFox:
 
-    ![FireFox](documentation/firefox.jpg)
+    ![FireFox](documentation/firefox.png)
 
     - Edge:
 
-    ![Edge](documentation/edge.jpg)
+    ![Edge](documentation/edge.png)
 
 ## Responsiveness
 
 + The website was checked by Responsive Viewer - Chrome browser extension
-    - iPad-Air-5-Resolution: 820x1276
-    ![Main Page](documentation/iPad-Air-5-820x1276.png)
     
-    - iPhone-14-Pro Resolution: 393x3063
-    ![Main Page](documentation/iPhone-14-Pro-393x3063.png)
-    
-    - iPhone-14-Pro-Max Resolution: 430x3229
-    ![Main Page](documentation/iPhone-14-Pro-Max-430x3229.png)
-    
-    - Macbook-Air Resolution: 1559x1761
-    ![Main Page](documentation/Macbook-Air-1559x1761.png)
-    
-    - Pixel-7-Pro Resolution: 480x3461
-    ![Main Page](documentation/Pixel-7-Pro-480x3461.png)
+    <details><summary><b>iPad-Air-5-Resolution: 820x3505</b></summary>
 
+    ![Main Page](documentation/iPad-Air-5-820x3505.png)
+    
+    </details><br>
+
+     <details><summary><b>iPhone-14-Pro Resolution: 393x6516</b></summary>
+    
+    ![Main Page](documentation/iPhone-14-Pro-393x6516.png)
+    
+    </details><br>
+
+    <details><summary><b>iPhone-14-Pro-Max Resolution: 430x6427</b></summary>
+
+    ![Main Page](documentation/iPhone-14-Pro-Max-430x6427.png)
+    
+    </details><br>
+
+    <details><summary><b>Macbook-Air Resolution: 1559x2120</b></summary>
+
+    ![Main Page](documentation/Macbook-Air-1559x2120.png)
+    
+    </details><br>
+
+    <details><summary><b>Pixel-7-Pro Resolution: 480x6403</b></summary>
+
+    ![Main Page](documentation/Pixel-7-Pro-480x6403.png)
+
+    </details><br>
 
 ### Manual testing
 
