@@ -148,8 +148,7 @@ As a site user I can contact the ABC Bookshop not only by phone or Email but fil
 As a site user I can easily find answers to frequently asked questions (FAQ) so that I don't have to call or write to the ABC Bookshop owners requests. | A user can click on FAQ link on the footer that leads to a separate page, where they can click on different questions and read the answers. The admin can add/edit or delete questions with answers via ABC Bookstore management link in the navbar. | &check;
 As a site user I can read Privacy Policy so that I can understand my rights along with using ABC Bookshop. | When the user clicks on Privacy Policy in the footer, the document is displayed. | &check;
 As a site user I can learn what is the Bookshop's Terms and Conditions so that I can understand my obligations when using the shop. | When the user clicks on Terms of Use in the footer, the document is displayed on separate page. | &check;
-As a site user I can buy items with reduced price so that I can choose them according special note. | When an item is on sale, the reduced price will show on both the product and product detail pages, the original price is crossed out.
-When the user puts the reduced item into the bag, the reduced price is taken into account and charged. | &check;
+As a site user I can buy items with reduced price so that I can choose them according special note. | When an item is on sale, the reduced price will show on both the product and product detail pages, the original price is crossed out. When the user puts the reduced item into the bag, the reduced price is taken into account and charged. | &check;
 As a site user when I bought a book I can add a review on it finding it in my order history so that I can express my opinion. | Only a user who had bought the book before and signed in to ABC Bookshop then can review a book. The review must be approved by the admin. The review is accessible from the product detail view page. | &check;
 As a site user I can visit the ABC Bookshop's facebook page so that I can have access to the news and photos from shop owners and become a follower of the bookshop. | When the user clicks on the Facebook icon in the footer it leads to the ABC Bookshop facebook page. | &check;
 As a site user I can receive an E-mail after purchase with details what I bought so that I can remember my purchase and find it in my mailbox. | E-mail is received by user with correct order information. | &check;
@@ -161,7 +160,12 @@ As a site user I can receive an E-mail after purchase with details what I bought
     When I tried to put variable into "if" conditional for finding a value either product exists in customer wishlist to change red heart icon state from regular to solid (or back) and implement "add" or "remove" item to wishlist it was hard to find correct expression for that variable because it's too long. 
     It's look this: {% if product in request.user.user_profile.customer_wishlist.product.all %}
         
-        *Solution:* I was debugging right on web-page where my icon was placed using "for" loop and additional variable to get content out (print on page) step by step from "request.user" then "request.user.user_profile" then "request.user.user_profile.customer_wishlist" and then "request.user.user_profile.customer_wishlist.product.all". Finally I cought the right value and inserted correct expression in my "if" statement and condition began working.
+        *Solution:* I was debugging right on web-page where my icon was placed using "for" loop 
+        and additional variable to get content out (print on page) step by step from 
+        "request.user" then "request.user.user_profile" then "request.user.user_profile.customer_wishlist" 
+        and then "request.user.user_profile.customer_wishlist.product.all". 
+        Finally I cought the right value and inserted correct expression in my "if" statement 
+        and condition began working.
 
 + ### Unsolved bugs
     None.

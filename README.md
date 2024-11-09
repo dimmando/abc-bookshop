@@ -443,87 +443,106 @@ Each user can review a particular book only once. So in case the customer had bo
 
 **Wishlist**
 
-As mentioned before, a wishlist functionality is available for registered users only.
-If a guest user attempts to add an item to their wishlist, they are asked to login (register) and then they can avail of this functionality.
-If a user attempts to add a book which is already in their wishlist, they are see a warning message.
-If a particular book was added to the wishlist and the user is signed in, the Add to Wishlist button changes to Remove from Wishlist button.
-On the Wishlist page the user can choose to add the book to their shopping bag.
+As mentioned before, a wishlist functionality is available for registered users only. If a guest user attempts to add an item to their wishlist, they are asked to login or register in the beginning and only after that they can do this.
+If a user attempts to add a book which is already in their wishlist, they are see a warning message regarding that fact.
+If a particular book was added to the wishlist and the user is signed in, the Add to Wishlist button nearby that book changes to Remove from Wishlist button.
+On the Wishlist page the user can also choose to add the book to their shopping bag.
 
-**bookshop management/Admin (CRUD functionality)**
+  <details><summary><b>Wishlist behaviour</b></summary>
 
-When an admin user is logged in, the bookshop Management link is available under their Profile. This feature was added so that the store admin user can perform all necessary tasks around store management without having to access the Django admin panel. Only a signed in admin can access the bookshop management link.
-An admin can add/edit/remove books from the store, add/edit/remove enquiries.
-When an admin user is signed in, edit/delete buttons are present on the book and enquiry cards.
+  ![Wishlist behaviour](documentation/wishlist.png)
+  </details><br>
 
-**Book Management**
+**Bookshop management (Administration functionality, CRUD)**
 
-**Add Book**
+When the administrator is logged in, the Bookshop Management link is available under their Profile (human body icon at the navbar). This feature was added because the shop management can want separate user-friendly page to perform all necessary tasks around book management without having  access to "complicated" Django admin panel or separate tasks between different administrators.
+Now single admin can add/edit/remove books from the shop, add/edit/remove FAQ's questions.
+When an admin user is signed in, edit/delete buttons are present on the book and enquiry cards as well.
 
-When the admin clicks an Add Book button, they are taken to an add a book form. Input is validated (e.g. all numbers must be positive integers, more details in the testing file).
-When the user clicks on the edit button, they are taken to all books view, where the edit buttons are visible and clickable.
-On the edit book form, the book details are already prefilled and can be amended.
-When the admin wants to delete a book, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the product is deleted.
+  <details><summary><b>Bookshop management</b></summary>
 
-**Enquiries/Enquiries Management**
+  ![Bookshop management](documentation/bookshop_management.png)
+  </details><br>
 
-There is a link to enquiries/FAQs in the footer to provide quick answers to common questions of the store's customers. The questions are clickable and answers are displayed.
+- **Book management - Add/Edit/Delete book**
 
+  When the admin clicks an Add Book button on the Book Management page, they are taken to an addition a book form. Inputs are validated.
+  When the user clicks on the edit button, they are taken to all books view, where the edit buttons are visible and clickable. At the edit book form, the book details are already prefilled and can be changed.
+  When the admin wants to delete a book, they are shown a deletion modal window just in case to provide a chance to cancel the operation. If they are sure and confirm deletion, the product is deleted.
 
-**Add Enquiry**
+    <details><summary><b>Add book form</b></summary>
 
-When the admin clicks an Add Enquiry button, they are taken to an add an enquiry form. Input is validated.
-The admin can choose to save the enquiry as a draft in which case only admin can see it in the all enquiries view.
-When the user clicks on the edit button, they are taken to all enquiries view, where the edit buttons are visible and clickable.
-On the edit enquiry form, the enquiry details are already prefilled and can be amended.
-When the admin wants to delete an enquiry, they are shown a deletion modal to provide a chance to cancel the deletion. If they are sure and confirm deletion, the enquiry is deleted.
+    ![Add book form](documentation/add_book_form.png)
+    </details><br>
 
+    <details><summary><b>Edit book form</b></summary>
+
+    ![Edit book form](documentation/edit_book_form.png)
+    </details><br>
+
+- **FAQ Management - Add/Edit/Delete enquiry**
+
+  There is a link to FAQ in the main navigation menu to provide quick answers to common questions of the shop's customers. 
+  The questions are clickable and collapsed answers are displayed.
+  When the admin clicks on Add Enquiry button, they are taken to an addition of question form. Inputs are validated.
+  The admin can choose to save the enquiry as a draft in which case only admin can see it in the all enquiries view.
+  When the admin clicks on the edit button, they are taken to all enquiries view, where the edit buttons are visible and clickable on all questions.
+  On the edit enquiry form, the question details are already prefilled and can be changed.
+  When the admin wants to delete an enquiry, they are shown a deletion modal window just in case to provide a chance to change their mind and cancel the operation. If they are sure there is possible to confirm deletion.
+
+  <details><summary><b>Add enquiry form</b></summary>
+
+  ![Add enquiry form](documentation/add_enquiry_form.png)
+  </details><br>
+
+  <details><summary><b>Edit enquiry form</b></summary>
+
+  ![Edit enquiry form](documentation/edit_enquiry_form.png)
+  </details><br>
 
 **Footer**
 
-At the bottom of the page there is a footer. For easy of use, all main navigation links are present.
+Placed at the bottom of the page. For easy of use, the are all main navigation links. Also the are links to social media including the ABC Bookshop's Facebook page, Privacy Policy and Terms of Use.
+Privacy Policy and Terms of Use were generated by using [termly.io](termly.io)
+
+By clicking on Subscribe Now! button that leads to a separate page with corresponding form customer can subscribe to a Newsletter.
+
+Also on the Footer user can see the contact information, including office location address, email and a phone number.
+
+The footer is responsive as well and was optimized for mobile devices by collapsing some of the information under the HELP link.
 
 <details><summary><b>Footer</b></summary>
 
-![Footer](/documentation/footer.png)
+![Footer](documentation/footer.png)
 </details><br>
 
-- Links to social media including the store's Facebook page
+**Newsletter Sign Up**
 
-- Frequently Asked Questions (more details above)
+In order for customers to stay in touch with our ABC Bookshop the is a newsletter functionality implemented. 
+This feature was made via [Mail Chimp](https://mailchimp.com/) service.
 
-- Privacy Policy
+When the user clicks on Subscribe Now! button, they go to a separate page, where they can fill an email and subscribe.
 
-- Terms of Use
+<details><summary><b>Newsletter Sign Up page</b></summary>
 
-Both Privacy Policy and Terms of Use were generated by using termly.io.
-
-- Shipping Info (can be found in FAQs)
-
-A customer can subscribe to a **Newsletter** by clicking the Subscribe Now! button, also present in the footer. 
-
-Last but not least, the user can see the contact information, including the address, email and a mobile number.
-
-The footer is responsive and was optimized for small devices by collapsing some of the information under the HELP link.
-
-**Newsletter**
-
-In order for customers to stay informed about the news in our bookshop we provide a newsletter functionality. This feature was developed through [Mail Chimp](https://mailchimp.com/) 
-When the user clicks on Subscribe Now! button, they are taken to a separate page, where they can easily fill in their email and subscribe.
+![Newsletter Sign Up page](documentation/newsletter.png)
+</details><br>
 
 **403, 404 and 500 Error Pages**
 
-If a user navigates to a page that does not exist, a customized 404 error page will appear.
+If a user try to navigate a page that does not exist, a customized 404 error page will appear.
 
-If a user attempts to do something they are not authorized to do, they will get a custom 403 Error page.
+If a user attempts to do something that is restricted to them, a custom 403 Error page will appear.
 
-If a user navigates to a page and there is a server/database related issue/error, they will be shown a customized 500 error page.
+If there is any problem with a server/database then a customized 500 error page will be shown.
 
 ## Future Features
 
-Here are some of the features I have left to the future development related to user stories labelled Won't have:
+Here are some of the future features related to user stories labelled in "Won't have" column on my Kanban board:
 - Download .pdf file with order summary
 - Contact Us requests saved in the Admin panel
 - Calculate book Rating based on user's vote
+
 
 # Technologies Used
 ## Languages
@@ -768,8 +787,8 @@ Take the following steps to create a clone of a project:
 - [Lucid Charts](https://lucidchart.com/)
 
 ## Media
-- Images were taken from [Unsplash](https://unsplash.com/), [Amazon](https://www.amazon.co.uk/)
-- Books were taken also from [https://uk.bookshop.org/](https://uk.bookshop.org/)
+- Images were taken from [Stocksnap](https://stocksnap.io/) 
+- Books were taken also from [Amazon](https://www.amazon.co.uk/), [https://uk.bookshop.org/](https://uk.bookshop.org/)
 
 ## Acknowledgements
 - Extra help and guidance was received from my mentor [Juliia Konovalova](https://github.com/IuliiaKonovalova) and from tutors from the Code Institute.
