@@ -201,8 +201,8 @@ a.category-badge>span.badge:hover {
 /* Toasts  */
 .message-container {
     position: fixed;
-    top: 103px;
-    right: 10px;
+    top: 90px;
+    right: 5px;
     z-index: 99999999999;
 }
 

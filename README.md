@@ -116,10 +116,10 @@ The primary goal of this project is to enable a purchase educational books. The 
 
 **First Time Visitor**
 
-  - A user sees the main features of the app on the welcome page: find a book by different search criteria or contact us.
+  - A user sees the main features of the app on the home screen
   - A user can register, log in and logout.
   - An anonymous user can:
-    -  browse the page
+    -  browse the books
     -  search for books in the search window
     -  sort books by category, name, rating and price
     -  filter the books by subject and age
@@ -132,10 +132,10 @@ The primary goal of this project is to enable a purchase educational books. The 
     -  can visit the store's Social Media pages
     -  can read Terms Of Use
     -  can read Privacy Policy
-    -  can add a book to their shopping bag directly form the all products view
-    -  see shopping cart
-    -  can add/view/delete/update number of books in their shopping cart
-    -  can delete from shopping cart at all
+    -  can add a book to their shopping bag directly from the all products view
+    -  see shopping bag
+    -  can add/view/delete/update number of books in their shopping bag
+    -  can delete from shopping bag at all
     -  make a purchase
     -  receive an email with order confirmation
   - On top of that, a logged in user can:
@@ -226,108 +226,98 @@ Color scheme was created ispiring strict business style. No fun color. Just busi
 
 I mainly used fontawesome icons, but some static icons in place as well.
 
-! - exclamation mark means New Arrival;
-SALE icon - means the book with reduced price.
+[Exclamation mark](static/images/new_arrivals_icon.svg) - means New Arrival;
+
+[Sale icon](static/images/sale_icon.svg) - means the book with reduced price.
 
 I used 'Barlow' font from Google fonts in the body and the 'Abril' font in the Logo and it seems it's work well with the ABC bookshop theme.
 
 # Features
 
-## CRUD Functionality
-
-Customers have full CRUD functionality for the shopping bag (viewing/adding/updating the amount/removing products from bag). They may also edit their delivery details if they are registered, logged-in users. Logged in customers may also view/add and remove products from their Wishlist and add reviews to books they had previously bought. ABC Bookshop Admin has access to the Admin Dashboard which allows them full CRUD for Books/Enquiries Management.
-
-## Features Details
-
 **Navbar**
 
-At the top of the page there is a navbar. At the top there is a **delivery banner** with information about the threshhold price which qualifies the customers for free delivery. Currently the threshhold price is set to €100.
-
-Second row contains the company's Logo, which is clickable and takes the user to the Home page.
-
-In the middle of the second row, there is a search bar which allows for searching books.
-
-When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are available.
+Navbar - at the top of the page. There is an ad banner attracting to buy more to enable a free delivery. Value of delivery threshhold is set to €100.
+Second row contains the shop's Logo, which is clickable and takes the user to the Home page.
+In the middle of the second row, there is a search bar which allows users to search books.
+When the user is not signed in, only Profile (Register/Login options only) and Shopping bag icons are visible.
 
 **Guest User**
 
-<details><summary><b>Top Navbar Guest</b></summary>
+<details><summary><b>Navbar Guest</b></summary>
 
-![Top Navbar Guest](documentation/top_navbar_guest.png)
+![Navbar Guest](documentation/navbar_guest.png)
 </details><br>
 
 **Logged in User**
 
-A wishlist icon becomes available for the signed in user. It's regular when the Wishlist is empty and solid when at least one item in it exists.
+A wishlist red icon becomes available for the signed in user. It's regular when the Wishlist is empty and solid when at least one item is in it.
+If the user signs in, they can access My Profile, where located default detail information about the user and their past orders.
+Shopping bag icon change color if there is at least one product presentin it.
 
-If the user signs in, they can access My Profile, where default information is saved and they can access their past orders.
+<details><summary><b>My Profile link with wishlist and bag with item in it</b></summary>
 
-<details><summary><b>My Profile</b></summary>
-
-![Wishlist Icon](documentation/my_profile.png)
+![Logged In User](documentation/navbar_logged.png)
 </details><br>
 
-Wishlist and Shopping bag icons change color if there is at least one product present.
+**Navbar bottom row - last line**
 
-<details><summary><b>Wishlist/Bag Icons orange</b></summary>
-
-![Wishlist/Bag Icons orange](documentation/icons_orange.png)
-</details><br>
-
-**Collapsible Navbar**
-
-<details><summary><b>Collapsed Navbar</b></summary>
-
-![Collapsed Navbar](documentation/collapsed_navbar.png)
-</details><br>
-
-<details><summary><b>Hamburger Open</b></summary>
-
-![Hamburger Open](documentation/hamburger_open.png)
-</details><br>
-
-**Navbar Bottom Row**
-In the last line of the navbar the user can click the following links:
+Contains main menu where the user can click the following links:
 - Home - takes the user to the home page
 - Subject - category filtering available
 - Special offers - new arrivals, on sale
 - FAQ - frequently asked questions
 - Contact us - takes the user to the contact form
 
-<details><summary><b>Navbar Bottom Row</b></summary>
+**The navigation bar is responsive on mobile devices**
 
-![Navbar Bottom Row](documentation/navbar_last_row.png)
-</details><br>
+- navigation bar contains ad banner with free delivery threshold and on the next line hamburger menu at the left side and main icons: magnifier, user icon, wishlist and bag icon. Tapping on magnifier inwoke an input field to enable user a search request.
 
-<details><summary><b>Navbar Sorting</b></summary>
+  <details><summary><b>Hamburger Menu</b></summary>
+  
+  ![Hamburger Menu](documentation/hamburger.png)
+  
+  </details><br>
+    
+- when the hamburger menu is clicked, there is dropdown menu with the links in the same order as in desktop menu but from the top to bottom.
 
-![Navbar Sorting](documentation/navbar_sorting.png)
-</details><br>
+  <details><summary><b>Hamburger open</b></summary>
+  
+  ![Hamburger Menu](documentation/hamburger_open.png)
+  
+  </details><br>
 
-<details><summary><b>Navbar Skill Level</b></summary>
 
-![Navbar Skill Level](documentation/navbar_skill_level.png)
-</details><br>
+  <details><summary><b>Navbar Subject</b></summary>
 
-<details><summary><b>Navbar Specials</b></summary>
+  ![Navbar Subject](documentation/navbar_subject.png)
 
-![Navbar Specials](documentation/navbar_special_offers.png)
-</details><br>
+  </details><br>
 
+  <details><summary><b>Navbar Special Offers</b></summary>
+
+  ![Navbar Special Offers](documentation/navbar_special.png)
+  </details><br>
+
+Navbar Subject submenu box and Navbar Special Offers submenu box look on desktop version absolutely the same. 
 
 **Account registration/login/logout**
 
-All user functionalities are a result of using django-allauth. Using this package has enabled me to set this functionality up quickly and easily. The user is informed if their password is too common or if it is too similar to their user name or email address.
+All user registration functionality is a result of using django-allauth package. Using this package enables to set full this functionality up very quickly and easily for that part of application. The user is informed if their password is too common or if it is too simple or even similar to their user name or email address. All these 3 pages have a simple design:
 
-**Sign Up Page**
+  <details><summary><b>Sign Up Page/Register</b></summary>
 
-Sign up Page has a simple design. The user has to enter their email address and password twice. This is due to defensive programming principle where we try to avoid unnecessary errors caused by small typos.
+  ![Sign Up Page/Register](documentation/sign_up.png)
+  </details><br>
 
-The user has to confirm their email address to finish up the registration process.
+  <details><summary><b>Sign In Page/Log In</b></summary>
 
-**Sign In Page** and **Logout Page** have intuitive functionality not needed to describe here.
+  ![Sign In Page/Log In](documentation/sign_in.png)
+  </details><br>
 
-The user can choose to remember their profile and they can avail of the inbuilt forgot password functionality as well.
+  <details><summary><b>Sign Out Page/Log Out</b></summary>
+
+  ![Sign Out Page/Log Out](documentation/sign_out.png)
+  </details><br>
 
 **Home page**
 
