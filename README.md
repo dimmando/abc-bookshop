@@ -398,34 +398,48 @@ Back to Profile button takes the user back to their My Profile page.
 
 **Shopping Bag**
 
-As this is an ecommerce project, one of the crucial features is the possibility to add products to the shopping bag and subsequently make a purchase.
+Both a guest and a registered user can make a purchase. Both guest and registered users will receive a confirmation email upon purchase as they both must provide an email.
 
-Both a guest and a registered user can make a purchase. If the user has an account, they can access their order history under My Profile. Both guest and registered users will receive an email upon purchase.
+A user can add one book directly from the all books view by clicking on Add to Bag button, or they can adjust the quantity in the book detail view and add a product from there with any book quantity (not more than 10).
 
-A user can add one book directly from the all books view by clicking on Add to Bag button, or they can adjust the quantity in the book detail view and add a product from there. The entered quantity must be a whole number and must not exceed 10 pieces due to the restricted capacity of the book store.
+When a user adds a product to their bag, they see a success toast message with the bag information and are informed about the delivery cost if the total amount is below €100. They can choose to click on Go to Your Bag and go there where they can adjust the amount/remove the book entirely or click Keep Shopping button to continue shopping. User is informed about all of their actions and the updated quantitity with Subtotal price are shown on the page.
 
-When a user adds a product to their bag, they see a success toast with the bag information and are informed about the delivery cost if the total amount is below €30. They can choose to click on Go to Your Bag and go to the shopping bag page where they can adjust the amount/remove the book entirely or click Keep Shopping button to continue shopping. User is informed about all of their actions and the updated quantities are reflected in the success toast.
+If there is at least one item in shopping bag, the bag icon changes its color.
 
-As soon as there is at least one item in shopping bag, the icon changes color to orange.
+  <details><summary><b>Shopping Bag</b></summary>
+
+  ![Shopping Bag](documentation/shopping_bag.png)
+  </details><br>
 
 **Secure Checkout**
 
-The checkout process for ABC Bookshop is done through the [Stripe](https://stripe.com/docs) API.
+The checkout process for ABC Bookshop is organized through the [Stripe](https://stripe.com) API.
 
-Both a guest and signed in user can go to checkout by clicking Go to Checkout button. If the user has an account and are signed in, their information is prefilled, if previously saved. They have to enter their Full Name and add credit card details. For testing purchases this card number was used: 4242 4242 4242 4242. The user must enter a future expiry date, the secure number and a 5 digit postcode.
+Both a guest and signed in user can go to checkout by clicking Go to Checkout button. If the user has an account and are signed in, their information is prefilled, if previously saved. They have to enter their Name that order will be delivered to a proper person and add credit card details. For testing purchases this card number can be used: 4242 4242 4242 4242. The user must enter a future expiry date, the CVC number and a 5 digit postcode.
 
-The user can choose to adjust bag their bag which takes them back to their shopping bag, or to click Complete Order button.
+The user can choose to adjust their bag at the last moment before the pressing Complete Order button which takes them back to their shopping bag, or to click Complete Order.
 
-The Stripe Payment form accepts the user's information and informs them if they try to use an invalid card number. Form validation is also present and the user is informed if they have not entered all of the details.
-As soon as the order is processed, the customer gets an email confirmation and is shown the order success message with order details.
-As a developer I can confirm in Stripe webhooks that the orders has been successfully processed.
+The card number input field accepts the user's information or informs them if they try to use an invalid card number. Form validation is also present and the user is informed if they have not entered all of the details properly.
+As soon as the order is processed, the customer gets an email confirmation and see the order success message with order details.
+
+As a developer I can see in Stripe webhooks section that the order has been successfully processed, webhook was sent and webhook handler in my app got it and provide info about it back to the Stripe.
+
+  <details><summary><b>Secure Checkout</b></summary>
+
+  ![Secure Checkout](documentation/secure_checkout.png)
+  </details><br>
 
 **Review Books**
 
-When a user receives their order confirmation, there is a list of products with details present. The individual books can be clicked on and the user is taken to the detail page of the particular book. If the user is signed in and they had not reviewed this particular book previously, there is a review form present where the user can express their opinion. These review links are available in the order history under My Profile as well.
+At the Detail Book View of the particular book if the user is signed in and they had not reviewed this particular book previously, there is a review form present where the user can express their opinion regarding this book. 
 Upon submission, the user is informed that the admin has to approve the review first.
-As soon as the review is approved, the number of reviews on the detail page of the chosen book is automatically updated and the user can click on the reviews button and the review is visible.
-Each user can review a particular book only once. So in case the customer had bought the same book before and had already reviewed it, the review form will not be visible.
+As soon as the review is approved, the number of reviews on the detail page of the exact book is automatically updates and the user can click on the Reviews button and the review becomes visible.
+Each user can review a particular book only once. So in case the customer had bought the same book before and had already reviewed it, the review form will not be available.
+
+  <details><summary><b>Review Books</b></summary>
+
+  ![Review Books](documentation/review.png)
+  </details><br>
 
 **Wishlist**
 
@@ -503,7 +517,6 @@ If a user navigates to a page that does not exist, a customized 404 error page w
 If a user attempts to do something they are not authorized to do, they will get a custom 403 Error page.
 
 If a user navigates to a page and there is a server/database related issue/error, they will be shown a customized 500 error page.
-
 
 ## Future Features
 
