@@ -261,7 +261,8 @@ Shopping bag icon change color if there is at least one product presentin it.
 
 **Navbar bottom row - last line**
 
-Contains main menu where the user can click the following links:
+Contains main menu that awailable for both type of users, Guest and Logged In, and where they can click the following links:
+
 - Home - takes the user to the home page
 - Subject - category filtering available
 - Special offers - new arrivals, on sale
@@ -285,7 +286,6 @@ Contains main menu where the user can click the following links:
   ![Hamburger Menu](documentation/hamburger_open.png)
   
   </details><br>
-
 
   <details><summary><b>Navbar Subject</b></summary>
 
@@ -321,53 +321,80 @@ All user registration functionality is a result of using django-allauth package.
 
 **Home page**
 
-The user can get to all books page at once the site is loaded. All books are displayed on main page in the form of product cards which contain the book's image, title, price, category, age range, rating, Add to Bag and Add to Wishlist/Remove from Wishlist buttons. The latter is available only for a signed in user if the item is already in the wishlist.
+The user can see all books page at once the site is loaded. All books are displayed on main page in the form of product cards which contain the book's image, title, price, category, age range, rating, Add to Bag and Add to Wishlist/Remove from Wishlist buttons. The latter functionality is available only if the user sign up and then sign in. After pressing related button Guest user will be redirected on the proper page. If the item is already in the wishlist corresponding message will appear.
 
-The books are displayed in rows of 4, 3, 2 or one depending on the screen size. There is implemented pagination functionality.
+The books are displayed in rows of 4, 3, 2 or 1 depending on the screen size. There is also pagination functionality implemented so that user can see only 8 product cards and the rest by pressing Next/Prevous button links or First/Last.
 
 The user can directly add one piece of the chosen product to the shopping bag.
 
-The user can add a product to the wishlist if they are signed in.
+The heading always reflects what segment of books is being displayed (e.g. All Books, New Arrivals, etc.).
 
-The heading always reflects what segment of books is being displayed (e.g. All Books, New Arrivals,...).
+Sorting products by price, rating, name and category is available at the right side just above first line of product cards. The books can be ordered in descending or ascedning order.
 
-Sorting products by price, rating, name and category is available from the navbar. The books can be ordered in descending or ascedning order. The sorting choice is reflected in the sorting window, which is available in the right top corner.
+Sorting by price works taking into account sales price if a product is on sale.
 
-Sorting by sales price works correctly (sales price is taken into account if a product is on sale).
+At the left top corner above the cards user can see small Home link and after symbol | Quantyty of Products currently on the page after searching of filtering.
 
 If a product is in one or more of the specials categories, the correct icons are displayed in the top right corner of the product card. If a product is on sale, the sale price is on the right in red and the original price is crossed out.
 
-Age filtering is available under the main heading on all products page. The age filtering takes into account a previous segment selection.
+Age segmentation filtering is available under the main heading on all products pages.
 
-If an admin is signed in, the edit/delete buttons are visible on the individual product cards as well. For details see the admin section.
+The main filtering functionality by subject is awailable under the SUBJECT link in the main navigation menu bar at the top.
+
+If an admin is signed in, the edit/delete buttons (as small links) are visible on the individual product cards as well.
 
 Back to top button is present in the right bottom corner of the page.
 
-**Book Detail View**
+  <details><summary><b>Home Page</b></summary>
 
-Each book detail page contains an image of the book, the title, the author, category, age range, price, rating and book description. The description is collapsed and can be unpacked by clicking read more button or collapsed by clicking read less button.
+  ![Home Page](documentation/homepage.png)
+  </details><br>
 
-The quantity of the product can be adjusted before add the product to the shopping bag. Only whole numbers can be accepted and the user is informed if they try to add a floating number.
 
-Keep shopping button takes the user back to all books view. A correct specials icon is included under the book picture. Also a Add to wishlist button is present and it changes to Remove from wishlist button if the user had previously added this product to their wishlist.
+**Detail Book View**
 
-If an admin is signed in, the edit/delete buttons are visible as well. For details see the admin section.
+Each book detail page contains an image of the book, the title, the author, category, age range, EAN (barcode), ISBN, price, rating and book description. The description is collapsed and can be opened fully by clicking read more button or collapsed by clicking read less button.
 
-If a book has been reviewed before, there is also an expandable button with a review icon and number of reviews present. For more details please see the Reviews section.
+The quantity of the product can be adjusted before adding the product to the shopping bag. Only whole numbers can be accepted and the user is informed if they try to add a floating number.
+
+Keep shopping button takes the user back to all books view. A correct specials icon is included under the book picture. Also an Add to wishlist button is also present and it changes to Remove from wishlist button if the user has already added this product to their wishlist.
+
+If an admin is signed in, the edit/delete buttons are visible as well.
+
+If a book has been reviewed before, there is also an expandable button with a review icon and number of reviews present.
 
 If a book image is clicked, the image opens in a new tab for a more detailed view.
 
-**Contact Form**
+  <details><summary><b>Detail Book View</b></summary>
 
-A user can send an enquiry to the store admin.
-They see a thank you page when the enquiry is submitted and also a success toast.
-An email is received by admin which they can reply to.
+  ![Detail Book View](documentation/detail_view.png)
+  </details><br>
+
+**Contact Us form**
+
+A user can send a request to the store owners. For example regarding book that not in stock and they can't find it anywhere but want to buy. They see a thank you page when the request is submitted and also a success toast message.
+An email is received by admin and they can reply to it.
+
+  <details><summary><b>Contact form</b></summary>
+
+  ![Contact form](documentation/contact_form.png)
+  </details><br>
+
 
 **My Profile**
 
-If a user has created an account with ABC Bookshop, they can save and update their default delivery information under their "My Profile" link under the Profile icon. Also the order history is accessible there and the orders are ordered from the newest to the oldest.
-The order history number is clickable and opens up a past order confirmation (the user is informed about this being a past confirnation).
+If a user has created an account on ABC Bookshop website, they can save and update their default delivery information under their "My Profile" link after clicking on human body icon. Also the order history is accessible there and the orders are ordered from the newest to the oldest. The order history number is clickable and opens up a past order confirmation (the user is informed about this).
 Back to Profile button takes the user back to their My Profile page.
+
+  <details><summary><b>My Profile</b></summary>
+
+  ![My Profile](documentation/profile.png)
+  </details><br>
+
+  <details><summary><b>Past order confirmation</b></summary>
+
+  ![Past order confirmation](documentation/confirmation.png)
+  </details><br>
 
 **Shopping Bag**
 
